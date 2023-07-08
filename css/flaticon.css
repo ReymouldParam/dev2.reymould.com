@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "flaticon_agency";
+    src: url("../fonts/flaticon_agencydd20.ttf?e690f3be7752a58c45a1cb585575b786") format("truetype"),
+url("../fonts/flaticon_agencydd20.woff?e690f3be7752a58c45a1cb585575b786") format("woff"),
+url("../fonts/flaticon_agencydd20.woff2?e690f3be7752a58c45a1cb585575b786") format("woff2"),
+url("../fonts/flaticon_agencydd20.eot?e690f3be7752a58c45a1cb585575b786#iefix") format("embedded-opentype"),
+url("../fonts/flaticon_agencydd20.svg?e690f3be7752a58c45a1cb585575b786#flaticon_agency") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_agency !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-internet:before {
+    content: "\f101";
+}
+.flaticon-box:before {
+    content: "\f102";
+}
+.flaticon-pen-tool:before {
+    content: "\f103";
+}
+.flaticon-pack:before {
+    content: "\f104";
+}
+.flaticon-up-arrow:before {
+    content: "\f105";
+}
+.flaticon-diagonal-arrow:before {
+    content: "\f106";
+}
+.flaticon-right-arrow:before {
+    content: "\f107";
+}
+.flaticon-ux-design:before {
+    content: "\f108";
+}
+.flaticon-box-1:before {
+    content: "\f109";
+}
+.flaticon-in-stock:before {
+    content: "\f10a";
+}
+.flaticon-product-promotion:before {
+    content: "\f10b";
+}
+.flaticon-globe:before {
+    content: "\f10c";
+}
+.flaticon-layer:before {
+    content: "\f10d";
+}
+.flaticon-layer-1:before {
+    content: "\f10e";
+}
+.flaticon-supply-chain:before {
+    content: "\f10f";
+}
+.flaticon-open-box:before {
+    content: "\f110";
+}
+.flaticon-mobile-application:before {
+    content: "\f111";
+}
+.flaticon-next:before {
+    content: "\f112";
+}
+.flaticon-down-arrow:before {
+    content: "\f113";
+}
+.flaticon-search:before {
+    content: "\f114";
+}
+.flaticon-magnifying-glass:before {
+    content: "\f115";
+}
+.flaticon-design:before {
+    content: "\f116";
+}
+.flaticon-touch:before {
+    content: "\f117";
+}
+.flaticon-technical-support:before {
+    content: "\f118";
+}
+.flaticon-personal-development:before {
+    content: "\f119";
+}
+.flaticon-networking:before {
+    content: "\f11a";
+}
+.flaticon-graphic-design:before {
+    content: "\f11b";
+}
