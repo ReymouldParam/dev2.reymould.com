@@ -23,7 +23,7 @@ document.getElementById("tab1").addEventListener("click", function(e){
     document.getElementById("tab1").classList.remove("border-light");
     document.getElementById("tab1").classList.add("border-highlighted");
     document.getElementById("content1").classList.remove("move-out-up");
-    document.getElementById("content1").style.display="flex";
+    document.getElementById("content1").style.display="block";
     document.getElementById("content1").classList.add("move-in-down");
 
   }else{
@@ -110,31 +110,55 @@ document.getElementById("tab4").addEventListener("click", function(e){
 });
 
 
-const carousel = document.querySelector('.carousel');
-    const images = carousel.querySelectorAll('img');
-    const interval = 2000; // 2 seconds
-    let currentIndex = 0;
+const carousel = document.querySelectorAll('.carousel');
+const images = carousel[0].querySelectorAll('img');
+const images1 = carousel[1].querySelectorAll('img');
+const images2 = carousel[2].querySelectorAll('img');
+const interval = 4000;
+let currentIndex = 0;
 
-    function showImage(index) {
-      images.forEach((img, i) => {
-        if (i === index) {
-          img.style.display = 'block';
-        } else {
-          img.style.display = 'none';
-        }
-      });
+function showImage(index) {
+  images.forEach((img, i) => {
+    if (i === index) {
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
     }
+  });
 
-    function slideNext() {
-      currentIndex++;
-      if (currentIndex >= images.length) {
-        currentIndex = 0;
-      }
-      showImage(currentIndex);
+  images1.forEach((img, i) => {
+    if (i === index) {
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
     }
+  });
 
-    showImage(currentIndex);
-    setInterval(slideNext, interval);
+  images2.forEach((img, i) => {
+    if (i === index) {
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
+    }
+  });
+}
+
+function slideNext() {
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  if (currentIndex >= images1.length) {
+    currentIndex = 0;
+  }
+  if (currentIndex >= images2.length) {
+    currentIndex = 0;
+  }
+  showImage(currentIndex);
+}
+
+showImage(currentIndex);
+setInterval(slideNext, interval);
 
 // Optionally, you can pause the animation on hover
 const scrollingContainer = document.querySelector('.scrolling-container');
@@ -144,3 +168,36 @@ scrollingContainer.addEventListener('mouseover', () => {
 scrollingContainer.addEventListener('mouseleave', () => {
   document.querySelector('.scrolling-content').style.animationPlayState = 'running';
 });
+
+function scrollUp() {
+  const carousel = document.querySelector('.clients-carousal');
+  const firstItem = carousel.firstElementChild;
+  const itemHeight = firstItem.offsetHeight;
+
+  // Scroll the first item out of view smoothly
+  firstItem.style.transition = 'transform 0.5s ease-in-out';
+  firstItem.style.transform = `translateY(-${itemHeight}px)`;
+
+  // After the transition ends, reset the position and remove the transition
+  firstItem.addEventListener('transitionend', function() {
+    carousel.appendChild(firstItem);
+    firstItem.style.transition = '';
+    firstItem.style.transform = '';
+  });
+}
+setInterval(scrollUp, 3000);
+
+
+// disable scroll
+
+var brandingContent = document.querySelectorAll(".branding-content-1");
+
+for(var i=0; i<brandingContent.length; i++){
+  brandingContent[i].addEventListener("mouseover", function(){
+    document.body.style.overflow = 'hidden';
+  });
+
+  brandingContent[i].addEventListener("mouseout", function(){
+    document.body.style.overflow = 'auto';
+  });
+}
