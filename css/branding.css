@@ -534,7 +534,7 @@
 
 @keyframes scroll-up {
   0% {
-    transform: translateY(0);
+    transform: translateY(+60%);
   }
   100% {
     transform: translateY(-100%);
@@ -566,6 +566,7 @@
   .branding-content-1{
     flex-direction: column;
     padding: 2vh 2vh 5vh 2vh;
+    margin:0;
   }
   .branding-inner-content, .branding-samples,.branding-samples2,.branding-samples3,.branding-samples4{
     width: 100%;
@@ -577,4 +578,120 @@
     text-align: justify;
   }
 
+  #content1{
+    padding: 0;
+    height: 67vh;
+  }
+
+  .branding-content-1 .branding-content-heading{
+    height: auto;
+  }
+
+  .branding-content-1 .branding-content-heading h3{
+    height: auto;
+  }
+
+  .branding-content-1 .branding-content-para{
+    height: auto;
+    text-align: justify;
+  }
+
+  .branding-inner-content-1{
+    display: block;
+    height: auto;
+  }
+
+  .branding-inner-content-1 > .features-box {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .branding-inner-content-1 .features-list li{
+    margin:0;
+    padding-left: 0;
+    font-size: 17px;
+  }
+
+  .branding-inner-content-1 .features-list li i{
+    height: 7px;
+    width: 7px;
+  }
+
+  .branding-inner-content-1-clients{
+    height: 80%;
+    margin-top: 5vh;
+  }
+
+  .branding-inner-content-1-clients .tag{
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+    margin: auto;
+    position: relative;
+  }
+
+  
+
+  .branding-inner-content-1-clients .clients-carousal{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .clients-carousel-item{
+    padding: 0;
+    display: block;
+  }
+
+  .clients-carousel-info{
+    font-size: small;
+  }
+
+  .clients-carousel-item .clients-carousel-logo{
+    width: 90%;
+    height: auto;
+  }
+
+  .branding-contents{
+    overflow: scroll;
+  }
+
+  /* #content2{
+    height: auto;
+    overflow-y: scroll;
+  } */
+
+  #content2 > .branding-inner-content{
+    overflow-y:visible;
+    height: auto;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  #content3{
+    padding:0;
+  }
+
+  #content3 > .branding-inner-content{
+    overflow-y: visible;
+    width: 90%;
+    margin: auto
+  }
+
+  #content4 > .branding-inner-content{
+    margin:0;
+    width: 100%;
+  }
+
+  #content4 > .branding-inner-content > .title{
+    font-size: 42px;
+  }
+
+  .scrolling-container{
+    margin: 0;
+  }
+  
+  .scrolling-content > p >a{
+    font-size: 20px;
+  }
 }
