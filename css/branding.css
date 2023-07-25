@@ -1,6 +1,6 @@
 .branding-section{
   padding:5vh 2vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin-top: 8vh;
   background-image: url('../images/icons/shape-6-1.png');
 }
@@ -64,13 +64,13 @@
 .branding-contents{
   position: relative;
   width:100%;
-  height: 70vh;
+  height: auto;
   /* overflow: hidden; */
 }
 
 .branding-content-1{
   margin: 0 1vh;
-  position: absolute;
+  /* position: absolute; */
   width:100%;
   height:100%;
   border:solid white;
@@ -79,8 +79,8 @@
   border-radius: 0 0 10px 10px;
   display:none;
   box-shadow: 0px 5px 10px rgba(255,255,255,0.5);
-  overflow: hidden;
-  overflow-y: scroll;
+  /* overflow: hidden;
+  overflow-y: scroll; */
 }
 
 /* brand consulting */
@@ -90,14 +90,14 @@
 }
 
 .branding-inner-content-1{
-  height: 60%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .branding-content-1 .branding-content-heading{
-  height: 20%;
+  height: auto;
   width: 90%;
   margin: auto;
 }
@@ -116,14 +116,14 @@
 }
 
 .branding-content-1 .branding-content-para{
-  height: 25%;
+  height: auto;
   width: 90%;
   margin: auto;
 }
 
 .branding-inner-content-1 > .features-box{
   width: 50%;
-  margin-top: 50px;
+  margin: 40px auto;
 }
 
 .branding-inner-content-1 .features-list li{
@@ -150,7 +150,7 @@
 
 .branding-inner-content-1-clients{
   position: relative;
-  height: 40%;
+  height: 180px;
   width: 90%;
   margin: auto;
 }
@@ -176,6 +176,7 @@
 
 .branding-inner-content-1-clients .clients-carousal{
   position: absolute;
+  top:0;
   right: 0;
   width:90%;
   height: 100%;
@@ -189,9 +190,12 @@
   display: flex;
   justify-content:space-between;
 }
+.clients-carousel-info{
+  height: auto;
+}
 
 .clients-carousel-item .clients-carousel-logo {
-  height: 60%;
+  height:auto;
   width: 30%;
   overflow: hidden;
   margin: auto;
@@ -225,7 +229,7 @@
 
 #content2 > .branding-inner-content{
   margin: 20px 40px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 #content2 > .branding-inner-content > .title{
@@ -283,6 +287,7 @@
 
 .branding-samples2{
   width:40%;
+  height: 70vh;
   padding: 10px;
   margin: 1vh 0;
   display: flex;
@@ -396,12 +401,31 @@
 
 
 .branding-samples3{
-  display: flex;
-  justify-content: space-around;
+  
   width: 50%;
   padding: 2vh;
 }
-.column1{
+
+.branding-samples3 > .marketing-service{
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+  color: var(--theme-color2);
+  border: solid 1px #e7e8e9;
+  font-family: var(--title-font);
+  transition: all 0.5s;
+}
+
+.branding-samples3 > .marketing-service:hover{
+  border: 0;
+  box-shadow: 0 0 10px #e7e8e9 ;
+  color: #e07527;
+}
+
+
+/* .column1{
   display: flex;
   flex-direction: column;
   width:65%;
@@ -430,7 +454,7 @@
   flex-direction: column;
   width: 33%;
   height: 100%
-}
+} */
 
 
 /* brand content 4 */
@@ -546,7 +570,7 @@
 /*Mobile Responcive*/
 /***************/
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
   .branding-section{
     padding:0;
     width:100%;
@@ -568,7 +592,12 @@
     padding: 2vh 2vh 5vh 2vh;
     margin:0;
   }
-  .branding-inner-content, .branding-samples,.branding-samples2,.branding-samples3,.branding-samples4{
+
+  .branding-samples2{
+    width: 100%;
+    height: 50vh;
+  }
+  .branding-inner-content, .branding-samples,.branding-samples3,.branding-samples4{
     width: 100%;
   }
   .branding-tab-1:hover{
@@ -580,7 +609,7 @@
 
   #content1{
     padding: 0;
-    height: 67vh;
+    /* height: 67vh; */
   }
 
   .branding-content-1 .branding-content-heading{
@@ -618,7 +647,7 @@
   }
 
   .branding-inner-content-1-clients{
-    height: 80%;
+    height: 400px;
     margin-top: 5vh;
   }
 
@@ -648,13 +677,13 @@
   }
 
   .clients-carousel-item .clients-carousel-logo{
-    width: 90%;
+    width: 30%;
     height: auto;
   }
 
-  .branding-contents{
+  /* .branding-contents{
     overflow: scroll;
-  }
+  } */
 
   /* #content2{
     height: auto;
@@ -668,6 +697,15 @@
     flex-direction: column;
   }
 
+  .branding-samples2-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    height: 90%;
+    padding-bottom: 5px;
+}
+
   #content3{
     padding:0;
   }
@@ -676,6 +714,10 @@
     overflow-y: visible;
     width: 90%;
     margin: auto
+  }
+
+  .branding-samples3 > .marketing-service{
+    font-size: 15px;
   }
 
   #content4 > .branding-inner-content{
@@ -694,4 +736,20 @@
   .scrolling-content > p >a{
     font-size: 20px;
   }
+}
+
+@media screen and (max-width:425px){
+  .clients-carousel-item .clients-carousel-logo{
+    width: 60%;
+    height: auto;
+  }
+
+  .branding-samples2-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin:auto;
+    height: 90%;
+    padding-bottom: 5px;
+}
 }
