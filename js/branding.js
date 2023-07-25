@@ -190,14 +190,14 @@ setInterval(scrollUp, 3000);
 
 // disable scroll
 
-var brandingContent = document.querySelectorAll(".branding-content-1");
+// var brandingContent = document.querySelectorAll(".branding-content-1");
 
-for(var i=0; i<brandingContent.length; i++){
-  brandingContent[i].addEventListener("mouseover", function(){
-    document.body.style.overflow = 'hidden';
-  });
+// for(var i=0; i<brandingContent.length; i++){
+//   brandingContent[i].addEventListener("mouseover", function(){
+//     document.body.style.overflow = 'hidden';
+//   });
 
-  brandingContent[i].addEventListener("mouseout", function(){
-    document.body.style.overflow = 'auto';
-  });
-}
+//   brandingContent[i].addEventListener("mouseout", function(){
+//     document.body.style.overflow = 'auto';
+//   });
+// }
