@@ -110,55 +110,6 @@ document.getElementById("tab4").addEventListener("click", function(e){
 });
 
 
-const carousel = document.querySelectorAll('.carousel');
-const images = carousel[0].querySelectorAll('img');
-const images1 = carousel[1].querySelectorAll('img');
-const images2 = carousel[2].querySelectorAll('img');
-const interval = 4000;
-let currentIndex = 0;
-
-function showImage(index) {
-  images.forEach((img, i) => {
-    if (i === index) {
-      img.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-    }
-  });
-
-  images1.forEach((img, i) => {
-    if (i === index) {
-      img.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-    }
-  });
-
-  images2.forEach((img, i) => {
-    if (i === index) {
-      img.style.display = 'block';
-    } else {
-      img.style.display = 'none';
-    }
-  });
-}
-
-function slideNext() {
-  currentIndex++;
-  if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-  if (currentIndex >= images1.length) {
-    currentIndex = 0;
-  }
-  if (currentIndex >= images2.length) {
-    currentIndex = 0;
-  }
-  showImage(currentIndex);
-}
-
-showImage(currentIndex);
-setInterval(slideNext, interval);
 
 // Optionally, you can pause the animation on hover
 const scrollingContainer = document.querySelector('.scrolling-container');
@@ -201,3 +152,20 @@ setInterval(scrollUp, 3000);
 //     document.body.style.overflow = 'auto';
 //   });
 // }
+
+
+// // swiper js intilization
+
+// var logoCarousel = document.querySelector(".logo-cube-carousel");
+
+// var swiper = new Swiper(logoCarousel, {
+//   effect: "cube",
+//   grabCursor: true,
+//   cubeEffect: {
+//     shadow: true,
+//     slideShadows: true,
+//     shadowOffset: 20,
+//     shadowScale: 0.94
+//   }
+// });
+
