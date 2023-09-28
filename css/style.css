@@ -45,6 +45,7 @@
   --theme-color2: #1a7bb1;
   --theme-color3: #fb5c71;
   --theme-color4: #e9232f;
+  --theme-color-orange:#e07527;
   --bg-theme-color1: var(--theme-color1);
   --bg-theme-color2: var(--theme-color2);
   --bg-theme-color3: var(--theme-color3);
@@ -12790,7 +12791,7 @@ Page Title
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 150px 0 70px;
+  padding: 150px 0 10px;
   min-height: 250px;
   text-align: center;
 }
