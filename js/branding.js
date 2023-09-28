@@ -110,15 +110,7 @@ document.getElementById("tab4").addEventListener("click", function(e){
 });
 
 
-
-// Optionally, you can pause the animation on hover
-const scrollingContainer = document.querySelector('.scrolling-container');
-scrollingContainer.addEventListener('mouseover', () => {
-  document.querySelector('.scrolling-content').style.animationPlayState = 'paused';
-});
-scrollingContainer.addEventListener('mouseleave', () => {
-  document.querySelector('.scrolling-content').style.animationPlayState = 'running';
-});
+// clients carousel scrool up
 
 function scrollUp() {
   const carousel = document.querySelector('.clients-carousal');
@@ -139,7 +131,9 @@ function scrollUp() {
 setInterval(scrollUp, 3000);
 
 
-// disable scroll
+
+
+// disable scroll when hovered on internal scroll
 
 // var brandingContent = document.querySelectorAll(".branding-content-1");
 
@@ -154,18 +148,33 @@ setInterval(scrollUp, 3000);
 // }
 
 
-// // swiper js intilization
+// graphic designing posters slick carousel
 
-// var logoCarousel = document.querySelector(".logo-cube-carousel");
 
-// var swiper = new Swiper(logoCarousel, {
-//   effect: "cube",
-//   grabCursor: true,
-//   cubeEffect: {
-//     shadow: true,
-//     slideShadows: true,
-//     shadowOffset: 20,
-//     shadowScale: 0.94
-//   }
-// });
+
+$('.poster-carousel').slick({
+  slidesToShow: 1, 
+  slidesToScroll: 1,
+  autoplay: true, 
+  autoplaySpeed: 3000,
+  centerPadding: '0',
+  centerMode:true,
+  arrows:false,
+  dots:false,
+  fade:true
+});
+
+
+$('.scrolling-content-websites').slick({
+  slidesToShow: 1, 
+  slidesToScroll: 1,
+  autoplay: true, 
+  autoplaySpeed: 3000,
+  centerPadding: '0',
+  centerMode:true,
+  arrows:false,
+  dots:false,
+  fade:true,
+  pauseOnHover:false
+});
 

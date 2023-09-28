@@ -10,6 +10,8 @@
 .branding-tabs{
   display:flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 100;
 }
 
 .border-highlighted{
@@ -20,6 +22,10 @@
   background-color: rgba(224, 117, 39, 0.6);
   box-shadow: 0px -5px  10px rgba(255,255,255,0.5);
   color: white;
+}
+
+.main-tab-title-mobile{
+  display: none;
 }
 
 /* .heading-highlighted{
@@ -74,6 +80,7 @@
 .branding-content-1{
   margin: 0 1vh;
   /* position: absolute; */
+  padding: 20px 40px;
   width:100%;
   height:100%;
   border:solid white;
@@ -220,7 +227,7 @@
 
 
 .branding-inner-content{
-  margin: 4% 2%;
+  margin: 0;
   width:100%;
   background-position: left;
   background-size: contain;
@@ -230,15 +237,33 @@
 /* carousel */
 /**************/
 
-#content2 > .branding-inner-content{
-  margin: 20px 40px;
-  /* overflow-y: scroll; */
+
+:root{
+  --box-orange-shadow: 0 0 8px var(--theme-color-orange);
+  --box-blue-shadow: 0 0 8px var(--theme-color2);
+
 }
 
 #content2 > .branding-inner-content > .logo-designing{
   display: flex;
   justify-content: space-between;
-  margin: 40px 0 !important;
+  margin: 20px 0 !important;
+  padding:10px 20px;
+  /* border: var(--theme-color-orange) solid 1px; */
+  box-shadow:var(--box-orange-shadow);
+  border-radius: 10px;
+  height: 300px;
+  transition: all 0.5s;
+}
+
+#content2 > .branding-inner-content > .logo-designing:hover{
+  box-shadow:var(--box-blue-shadow);
+}
+
+#content2 > .branding-inner-content > .logo-designing > .logo-designing-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #content2 > .branding-inner-content > .title{
@@ -275,7 +300,7 @@
 #content2 > .branding-inner-content > .logo-designing > .logo-samples-container{
   width: 200px;
   height: 150px;
-  margin: 0 5%;
+  margin: 5% 5%;
   perspective: 800px;
 }
 
@@ -284,7 +309,7 @@
   height: 100%;
   transform-style: preserve-3d;
   position: relative;
-  animation: logoAnimation 50s infinite linear;
+  animation: logoAnimation 30s infinite linear;
   animation-delay: 1s;
 }
 
@@ -334,55 +359,52 @@
   12.5%{
     transform: rotateX(0deg) rotateY(90deg);
   }
-  15%{
+  16%{
     transform: rotateX(0deg) rotateY(90deg);
   }
 
-  25%{
+  26%{
     transform: rotateX(0deg) rotateY(180deg);
   }
-  27.5%{
+  28.5%{
     transform: rotateX(0deg) rotateY(180deg);
   }
 
-  37.5%{
+  38.5%{
     transform: rotateX(0deg) rotateY(270deg);
   }
-  40%{
+  41%{
     transform: rotateX(0deg) rotateY(270deg);
   }
 
-  50%{
+  51%{
     transform: rotateX(0deg) rotateY(360deg);
   }
-  52.5%{
+  53.5%{
     transform: rotateX(0deg) rotateY(360deg);
   }
 
-  62.5%{
+  61.5%{
     transform: rotateX(90deg) rotateY(360deg);
   }
-  65%{
+  66%{
     transform: rotateX(90deg) rotateY(360deg);
   }
 
-  75%{
+  76%{
     transform: rotateX(-90deg) rotateY(360deg);
   }
-  77.5%{
+  78.5%{
     transform: rotateX(-90deg) rotateY(360deg);
   }
 
-  87.5%{
+  88.5%{
     transform: rotateX(0deg) rotateY(360deg);
   }
-  90%{
-    transform: rotateX(0deg) rotateY(360deg);
-  }
-
   100%{
     transform: rotateX(0deg) rotateY(360deg);
   }
+
 }
 
 #content2 > .branding-inner-content > .graphic-content > .graphic-content-points{
@@ -412,9 +434,22 @@
 }
 
 #content2 > .branding-inner-content > .broucher-poster-designing{
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 20px;
+}
+
+#content2 > .branding-inner-content > .broucher-poster-designing > .broucher-content-container, #content2 > .branding-inner-content > .broucher-poster-designing > .poster-content-container{
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: var(--box-orange-shadow);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+#content2 > .branding-inner-content > .broucher-poster-designing > .broucher-content-container:hover, #content2 > .branding-inner-content > .broucher-poster-designing > .poster-content-container:hover{
+  box-shadow: var(--box-blue-shadow);
 }
 
 #content2 > .branding-inner-content > .broucher-poster-designing > .broucher-content-container >h4, #content2 > .branding-inner-content > .broucher-poster-designing > .poster-content-container >h4{
@@ -422,18 +457,64 @@
   font-weight: 600;
 }
 
-#content2 > .branding-inner-content > .broucher-poster-designing > .broucher-samples-container, #content2 > .branding-inner-content > .broucher-poster-designing > .poster-samples-container{
-  height: 80vh;
-  width: auto;
+.broucher-samples-container, .poster-samples-container{
+  height: 70vh;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
-#content2 > .branding-inner-content > .broucher-poster-designing > .broucher-samples-container > .broucher-flip-book-carousel{
-  width: 80%;
+.poster-samples-container {
+  width: 35vw;
+  margin: auto;
+}
+
+.broucher-samples-container > .broucher-flip-book-carousel{
+  width: 90%;
   margin: auto;
   position: relative;
   display: flex;
+}
+
+.poster-samples-container > .poster-carousel{
+  height: 100%;
+  width: 100%;
+  padding: 6%;
+}
+
+.poster-samples-container > .poster-carousel > .slick-list, .poster-samples-container > .poster-carousel > .slick-list > .slick-track{
+  width: 100%;
+  height: 100%;
+}
+
+.poster-carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .poster-carousel-item > img{
+  height: 100%;
+  width:auto;
+}
+
+#content2 > .branding-inner-content > .graphic-content > .many-more-container > .many-more-text{
+  color: var(--theme-color2);
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+
+#content2 > .branding-inner-content > .graphic-content > .many-more-container > .many-more-text:hover{
+  color: var(--theme-color-orange);
+  margin-left: 10px;
+}
+
+#content2 > .branding-inner-content > .graphic-content > .many-more-container > .many-more-text > span{
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--theme-color-orange);
+  display: inline-block;
 }
 
 /* flip animartions */
@@ -624,9 +705,13 @@
 
 /* brand content 4 */
 
+#content4{
+  flex-direction: column;
+}
+
 #content4 > .branding-inner-content{
-  margin: 20px 40px ;
-  width: 60%;
+  margin: 20px auto ;
+  width: 90%;
 }
 
 #content4 > .branding-inner-content > .title{
@@ -644,7 +729,8 @@
 
 
 .branding-samples4{
-  width: 40%;
+  width: 90%;
+  margin: auto;
   text-align: center;
   padding: 4vh 0vh;
   flex-direction: column;
@@ -661,14 +747,14 @@
 }
 
 .scrolling-container {
-  height: 25vh;
+  height: auto;
   overflow: hidden;
   margin:10vh;
 }
-
+/* 
 .scrolling-content {
   animation: scroll-up 30s linear infinite;
-}
+} */
 
 
 .link{
@@ -732,7 +818,7 @@
 
 
 /****************/
-/*Mobile Responcive*/
+/*tablet Responcive*/
 /***************/
 
 @media screen and (max-width:768px) {
@@ -743,11 +829,11 @@
   }
   .branding-tab-1{
     margin:0;
-    height: 14vh;
   }
   .branding-tab-1>h4{
-    font-size: 2vh;
+    font-size: 1.1rem;
     font-weight: 300;
+    margin: 0;
   }
   .branding-tab-1>i{
     font-size: 2vh;
@@ -756,6 +842,27 @@
     flex-direction: column;
     padding: 2vh 2vh 5vh 2vh;
     margin:0;
+  }
+
+  #content2 > .branding-inner-content > .logo-designing > .logo-designing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    padding: 0 4% 0 0;
+}
+
+  #content2 > .branding-inner-content > .logo-designing > .logo-samples-container{
+    margin: 10% 5%;
+  }
+
+  .broucher-samples-container, .poster-samples-container{
+    height: auto;
+    margin: 20px auto;
+  }
+
+  #content2 > .branding-inner-content > .broucher-poster-designing > .broucher-content-container, #content2 > .branding-inner-content > .broucher-poster-designing > .poster-content-container{
+    margin: 0;
   }
 
   .branding-samples2{
@@ -898,12 +1005,17 @@
     margin: 0;
   }
   
-  .scrolling-content > p >a{
+  .scrolling-content-websites > p >a{
     font-size: 20px;
   }
 }
 
-@media screen and (max-width:425px){
+/****************/
+/*mobile Responcive*/
+/***************/
+
+
+@media screen and (max-width:530px){
   .clients-carousel-item .clients-carousel-logo{
     width: 60%;
     height: auto;
@@ -922,5 +1034,121 @@
   .branding-samples2-inner > .carousel{
     width: 45%;
     margin: 0;
+  }
+
+  .large-container{
+    padding: 0 10px;
+  }
+
+  .main-tab-title-mobile{
+    display: block;
+  }
+
+  .main-tab-title-mobile > .main-heading{
+    font-size: 2rem;
+    background-color: var(--theme-color-orange);
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .branding-content-1{
+    display: flex !important;
+  }
+  .branding-tabs{
+    display: none;
+  }
+
+  .branding-content-1{
+    box-shadow: none;
+    border: 0;
+  }
+
+  #content2 > .branding-inner-content > .title{
+    font-size: 30px;
+  }
+
+  #content2 > .branding-inner-content > .logo-designing{
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #content2 > .branding-inner-content > .logo-designing > .logo-samples-container {
+    margin: 25% auto;
+    width: 150px;
+  }
+
+  #content2 > .branding-inner-content > .logo-designing > .logo-designing-content{
+    width: 100%;
+  }
+
+  #content2 > .branding-inner-content > .broucher-poster-designing{
+    flex-direction: column;
+  }
+  #content2 > .branding-inner-content > .broucher-poster-designing > .broucher-content-container, #content2 > .branding-inner-content > .broucher-poster-designing > .poster-content-container{
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .broucher-samples-container, .poster-samples-container{
+    width: 100%;
+  }
+  #content2 > .branding-inner-content > .graphic-content > .many-more-container > .many-more-text{
+    font-size: 2rem;
+  }
+
+  .branding-content-1 .branding-content-heading h3{
+    font-size: 30px;
+  }
+
+  .clients-carousel-item{
+    height: 100%;
+  }
+
+  .branding-inner-content-1-clients .clients-carousal{
+    height: 65%;
+  }
+
+  #content3 > .branding-inner-content > .title{
+    font-size: 30px;
+  }
+
+  .branding-content-1 .branding-content-heading, .branding-content-1 .branding-content-para{
+    width: 100%;
+  }
+
+  #content1{
+    padding: 20px;
+    box-shadow: var(--box-blue-shadow);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 95%;
+  }
+
+  .branding-inner-content-1-clients{
+    width: 100%;
+  }
+
+  #content3{
+    box-shadow: var(--box-orange-shadow);
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+    margin:20px auto;
+  }
+
+  #content4 > .branding-inner-content > .title{
+    font-size: 30px;
+  }
+
+  #content4{
+    box-shadow: var(--box-blue-shadow);
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+    margin:20px auto;
+  }
+
+  #content1, #content2, #content3, #content4{
+    animation: none ;
   }
 }
