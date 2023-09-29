@@ -9263,6 +9263,13 @@ Section Title
   min-width: 470px;
   padding: 20px 20px;
 }
+
+@media only screen and (max-width: 500px) {
+  .pricing-block .features-box {
+    min-width: 0;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .pricing-block .features-box {
     padding: 20px 0;
@@ -12797,7 +12804,7 @@ Page Title
 }
 @media only screen and (max-width: 768px) {
   .page-title {
-    padding: 110px 0 110px;
+    padding: 110px 0 10px;
   }
 }
 .page-title:before {
