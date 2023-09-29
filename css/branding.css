@@ -266,6 +266,10 @@
   justify-content: center;
 }
 
+#content2 > .branding-inner-content > .logo-designing > .logo-designing-content > .text{
+  margin: 10px 0;
+}
+
 #content2 > .branding-inner-content > .title{
   color:#e07527;
   font-size: 45px;
