@@ -684,6 +684,10 @@ Global Settings
 ====================================================================
 
 ***/
+.main-box > .logo-box{
+  width: 20%;
+}
+
 textarea {
   overflow: hidden;
   resize: none;
@@ -12799,12 +12803,15 @@ Page Title
   background-position: center;
   background-size: cover;
   padding: 150px 0 10px;
-  min-height: 250px;
+  /* min-height: 250px; */
   text-align: center;
 }
 @media only screen and (max-width: 768px) {
+  .main-box > .logo-box{
+    width: 40%;
+  }
   .page-title {
-    padding: 110px 0 10px;
+    padding: 60px 0 10px;
   }
 }
 .page-title:before {

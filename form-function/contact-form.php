@@ -10,13 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $email_body = "Name : ".$name."Email : ".$email."Mobile Number : ".$phone."Message : ".$message;
 
-    $header = "From <noreply@reymould.com>";
+    $header = "From: <noreply@reymould.com>";
 
     if (mail($to, $subject, $email_body,$header)) {
-        header("Location: ../index.html?emailStatus=enqiryPass");
+        header("Location: ../contactus?emailStatus=enqiryPass");
         exit;
     } else {
-        header("Location: ../index.html?emailStatus=enqiryFail");
+        header("Location: ../contactus?emailStatus=enqiryFail");
         exit;
     }
     exit;

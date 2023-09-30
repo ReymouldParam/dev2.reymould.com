@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Reymould</title>
+
+<title>ReyMould Brand Crafters: Branding & Digital Marketing Services</title>
+
+<!-- meta data -->
+<meta name="title" content="ReyMould Brand Crafters: Branding & Digital Marketing Services" />
+<meta name="description" content="We Offer Branding & Marketing Strategies | Digital Marketing: SMM, SEO, Google Ads, Content Marketing | Graphic Designing | UI/UX Design & Website Development" />
+<meta name="keywords" content="Digital Marketing, SEO, Google Ads, Graphic Designing, Website" />
+
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -157,13 +164,13 @@
   <!-- Start main-content -->
   <section class="page-title" style="background-image: url(images/background/page-title.jpg);">
     <div class="auto-container">
-      <div class="title-outer">
+      <!-- <div class="title-outer">
         <h1 class="title">Contact Us</h1>
         <ul class="page-breadcrumb">
           <li><a href=".">Home</a></li>
           <li>Contact</li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- end main-content -->
@@ -291,6 +298,26 @@
   <!--End Main Footer -->
 
 </div>
+
+<!-- form submission responce using url parametes -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+      const flagValue = urlParams.get('emailStatus');
+
+      if (flagValue === 'enqiryPass') {
+          alert("Success, Our Team Will Contact At Earliest!");
+      }else if(flagValue === 'enqiryFail'){
+          alert("Falied: Unable to send message, please contact us directly!");
+      }
+
+      // Get the current URL without the query parameters
+      const baseUrl = window.location.href.split('?')[0];
+
+      // Replace the current state with a new state without the query parameters
+      history.replaceState(null, null, baseUrl);
+
+</script>
+
 <!-- End Page Wrapper -->
 
 <!-- Scroll To Top -->
