@@ -10,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $email_body = "Name : ".$name."Email : ".$email."Mobile Number : ".$phone."Message : ".$message;
 
-    $header = "From: <noreply@reymould.com>";
+    // $header = "From: <noreply@reymould.com>";
 
-    if (mail($to, $subject, $email_body,$header)) {
+    if (mail($to, $subject, $email_body)) {
         header("Location: ../contactus?emailStatus=enqiryPass");
         exit;
     } else {
