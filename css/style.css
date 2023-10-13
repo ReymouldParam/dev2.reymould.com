@@ -4697,6 +4697,7 @@ Section Title
   line-height: 120px;
   color: var(--theme-color-light);
   margin-bottom: 0;
+  text-transform: capitalize;
 }
 .banner-section-two .title-box .title .highlighted {
   position: relative;
@@ -9212,6 +9213,9 @@ Section Title
 .pricing-block .inner-box:hover .title-box .title {
   color: var(--theme-color2);
 }
+.pricing-block .title-features-container{
+  margin-right: 20px;
+}
 .pricing-block .title-box {
   position: relative;
   min-width: 380px;
@@ -9264,7 +9268,7 @@ Section Title
 }
 .pricing-block .features-box {
   position: relative;
-  min-width: 470px;
+  min-width: 50vw;
   padding: 20px 20px;
 }
 
