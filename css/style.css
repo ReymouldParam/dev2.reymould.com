@@ -2794,6 +2794,22 @@ Main Header
   display: none;
 }
 
+.main-menu .navigation > li > .nav-sm-icon-container > a > i{
+  color: white;
+  font-size: 1.05rem;
+  margin: 0 4px;
+}
+
+.main-menu .navigation > li > .nav-sm-icon-container > a > i:hover{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1023px) {
+  .mobile-menu .navigation li:last-child{
+    display: none;
+  }
+}
+
 .main-header .outer-box {
   position: relative;
   display: -webkit-box;
