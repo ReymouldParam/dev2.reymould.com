@@ -4692,7 +4692,7 @@ Section Title
   }
 }
 .banner-section-two .title-box .title {
-  width: 800px;
+  width: 1200px;
   font-size: 80px;
   line-height: 120px;
   color: var(--theme-color-light);
@@ -4714,7 +4714,6 @@ Section Title
   height: 4px;
   width: 60px;
   background-color: #fff;
-  content: "";
 }
 @media only screen and (max-width: 1023px) {
   .banner-section-two .title-box .title {
@@ -4750,7 +4749,8 @@ Section Title
 }
 .banner-section-two .read-more {
   position: absolute;
-  left: 350px;
+  /* left: 350px; */
+  right: 0;
   bottom: 30px;
   font-size: 18px;
   line-height: 30px;
