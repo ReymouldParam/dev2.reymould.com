@@ -1,0 +1,69 @@
+body{
+    background-color:black;
+}
+/* .dark-background{
+    background-image: url(../images/icons/dark-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+} */
+.web-heading{
+    font-family:"Prata",sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:#ffffff;
+}
+.web-para{
+    font-family:"Prata",sans-serif;
+    font-size:14px;
+    font-weight: 400;
+    color:#ffffff;
+}
+.wecovered-heading{
+    font-family:"Prata",sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:white;
+}
+.web-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top:10%;
+}
+
+.ordered-list{
+    list-style-type:number;
+    color:white;
+    font-family:"Prata",sans-serif;
+    font-size:14px;
+    font-weight: 400;
+    color:#ffffff;
+    width:300px;
+}
+.web-con2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:85%;
+    margin:auto;
+    justify-content: space-evenly;
+}
+.web-para-product{
+    font-family:"Prata",sans-serif;
+    font-size:14px;
+    font-weight: 400;
+    color:#ffffff;
+    text-align:justify;
+}
+.web-heading2{
+    font-family:"Prata",sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:#ffffff;   
+}
+.web-con3{
+    width:80%;
+    margin:auto;
+}
