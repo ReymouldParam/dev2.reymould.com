@@ -13,6 +13,7 @@ body{
     font-size:60px;
     font-weight: 400;
     color: #878c8f;
+    padding-left: 2%;
 }
 
 .wecovered-heading{
@@ -31,7 +32,7 @@ body{
     margin: auto;
     padding-top: 10%;
     /* margin-left: -60px; */
-    padding-left: 12%;
+    padding-left: 11%;
     padding-right:11%;
 }
 .web-img{

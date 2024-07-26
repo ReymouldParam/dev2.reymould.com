@@ -20,7 +20,7 @@ body{
     font-size:40px;
     font-weight: 400;
     color: #878c8f !important;
-    margin-left: 13%;
+    margin-left: 3%;
     padding-top: 2%;
 }
 .web-con{
@@ -31,13 +31,13 @@ body{
     margin: auto;
     padding-top: 10%;
     /* margin-left: -60px; */
-    padding-left: 12%;
+    padding-left: 11%;
     padding-right:11%;
 }
 .web-img{
     width:40%;
     height:auto;
-    padding-left: 3%;
+    padding-right: 2%;
 }
 .ordered-list {
     list-style: none;
@@ -46,7 +46,7 @@ body{
     padding-bottom: 2%;
     font-weight: 500;
     line-height: 30px;
-    margin-left: 15%;
+    margin-left: 6%;
     position: relative;
 }
 
