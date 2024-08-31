@@ -1,5 +1,10 @@
 RewriteEngine on
 
+# Redirect to https://www.reymould.com
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.reymould\.com$ [NC]
+RewriteRule ^(.*)$ https://www.reymould.com/$1 [L,R=301]
+
 #Rewrite Condition for Directory
 RewriteCond %{REQUEST_FILENAME} !-d
 
