@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $to = "contact@reymould.com" ;
+    $to = "reymould.social@gmail.com" ;
     $name =  $_POST["name"];
     $email =  $_POST["email"];
     $phone = $_POST["phone"];
@@ -11,6 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email_body = "Name : ".$name."\nEmail : ".$email."\nMobile Number : ".$phone."\nMessage : ".$message;
 
     $header = "From: <".$email.">";
+
+    mail("contact@reymould.com", $subject, $email_body,$header)
+    mail("revanth.danduboina@reymould.com", $subject, $email_body,$header)
+    mail("revanthdanduboina@gmail.com", $subject, $email_body,$header)
 
     if (mail($to, $subject, $email_body,$header)) {
         header("Location: ../contactus?emailStatus=enqiryPass");
