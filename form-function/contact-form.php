@@ -1,22 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $to = "reymould.social@gmail.com" ;
-    $name =  $_POST["name"];
-    $email =  $_POST["email"];
+    $to = "reymould.social@gmail.com";
+    $name = $_POST["name"];
+    $email = $_POST["email"];
     $phone = $_POST["phone"];
 
     $subject = "Enqiry from Reymould Website";
     $message = $_POST["message"];
 
-    $email_body = "Name : ".$name."\nEmail : ".$email."\nMobile Number : ".$phone."\nMessage : ".$message;
+    $email_body = "Name : " . $name . "\nEmail : " . $email . "\nMobile Number : " . $phone . "\nMessage : " . $message;
 
-    $header = "From: <".$email.">";
+    $header = "From: <" . $email . ">";
 
-    mail("contact@reymould.com", $subject, $email_body,$header)
-    mail("revanth.danduboina@reymould.com", $subject, $email_body,$header)
-    mail("revanthdanduboina@gmail.com", $subject, $email_body,$header)
+    mail("contact@reymould.com", $subject, $email_body, $header);
+    mail("revanth.danduboina@reymould.com", $subject, $email_body, $header);
+    mail("revanthdanduboina@gmail.com", $subject, $email_body, $header);
 
-    if (mail($to, $subject, $email_body,$header)) {
+    if (mail($to, $subject, $email_body, $header)) {
         header("Location: ../contactus?emailStatus=enqiryPass");
         exit;
     } else {
