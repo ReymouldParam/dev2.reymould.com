@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <!-- Products Page Styling -->
-     <link rel="stylesheet" href="css/latest-styling/products.css">
+    <link rel="stylesheet" href="css/latest-styling/products.css">
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +51,8 @@
     <div class="page-wrapper dark-layout style-two">
 
         <!-- Main Header-->
-        <header class="main-header header-style-two" id="starting-header" style="background-image: url(images/background/page-title.jpg); background-size: cover; background-position: center;">
+        <header class="main-header header-style-two" id="starting-header"
+            style="background-image: url(images/background/page-title.jpg); background-size: cover; background-position: center;">
             <div class="auto-container">
                 <!-- Main box -->
                 <div class="main-box">
@@ -220,31 +221,114 @@
         </section>
         <!--End Hidden Bar -->
         <!-- HTML -->
-        <section class="page-products" >
-            <!-- Tabs -->
-            <div class="product-tabs">
-                <a class="tab-link active" data-tab="1">ALL PRODUCTS</a>
-                <a class="tab-link" data-tab="2">TRAVEL CRM</a>
-                <a class="tab-link" data-tab="3">CALL TRACKER APP</a>
-                <a class="tab-link" data-tab="4">WEBSITE BUILDER</a>
-                <a class="tab-link" data-tab="5">WHATSAPP MARKETING</a>
-                <a class="tab-link" data-tab="6">REYFERJOBS</a>
-            </div>
-
-            <!-- Product Info -->
-            <div class="product-content">
-                <!-- Left -->
-                <div class="content-left active">
-                    <h1>Travel CRM</h1>
-                    <p>Track and manage client data effortlessly with our integrated Call Tracker App designed for
-                        sales and operations teams.</p>
-                    <button class="read-more">READ MORE</button><br />
-                    <a href="https://tripmeld.com/" target="_blank" class="link">https://tripmeld.com/ →</a>
+        <section class="page-products">
+            <div>
+                <!-- Tabs Navigation -->
+                <div class="product-tabs">
+                    <a class="tab-link active" data-tab="1">ALL PRODUCTS</a>
+                    <a class="tab-link" data-tab="2">TRAVEL CRM</a>
+                    <a class="tab-link" data-tab="3">CALL TRACKER APP</a>
+                    <a class="tab-link" data-tab="4">WEBSITE BUILDER</a>
+                    <a class="tab-link" data-tab="5">WHATSAPP MARKETING</a>
+                    <a class="tab-link" data-tab="6">REYFERJOBS</a>
                 </div>
+                <!-- Product Content -->
+                <div class="product-content">
+                    <!-- Right Side - Product Info -->
+                    <div class="content-right">
+                        <h1 class="product-title">TripMeld Travel CRM</h1>
 
-                <!-- Right -->
-                <div class="content-right active">
-                    <img src="images/project-image.png" alt="App Image" />
+                        <p class="product-description">
+                            Our experienced consultants work closely with clients to provide insights, analysis, and
+                            recommendations to help them make informed decisions and achieve their business goals. We
+                            use a data-driven approach and the latest tools and technologies to provide customized
+                            solutions that meet our clients' unique needs.
+                        </p>
+
+                        <div class="logo-section">
+                            <svg width="150" height="40" viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+                                <text x="0" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold"
+                                    fill="#ff7b00">TripMeld</text>
+                            </svg>
+                        </div>
+
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary">READ MORE</button>
+                        </div>
+
+                        <a href="https://tripmeld.com/" target="_blank" class="product-link">
+                            Visit https://tripmeld.com/ →
+                        </a>
+                    </div>
+                    <!-- Left Side - Laptop Mockup -->
+                    <div class="content-left active">
+                        <div class="laptop-mockup">
+                            <!-- Screen Content (keep this) -->
+                            <div class="screen-content">
+                                <img src="images/Tripmeld-crm.png" alt="Product Image" class="product-screenshot">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Features Section -->
+                <div class="product-features-section">
+                    <div class="features-header">
+                        <h2>TRIPMELD BEST FEATURES</h2>
+                    </div>
+
+                    <!-- Features Grid - Top Row -->
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Instant Lead Generation</h3>
+                            <p>Capture and organize leads instantly from multiple channels</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <h3>Integrated Query Creation</h3>
+                            <p>Automated query management from customer inquiries</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <h3>Seamless Communication</h3>
+                            <p>Integrated messaging and call tracking systems</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <h3>Trip/Visa Integration</h3>
+                            <p>Unified platform for bookings and applications</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <h3>Real-Time View Tracking</h3>
+                            <p>Monitor interactions with detailed analytics</p>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Feature Section - Bottom Card -->
+                    <div class="feature-detail">
+                        <div class="feature-detail-image">
+                            <img src="https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Lead+Generation+Dashboard"
+                                alt="Feature Detail" class="feature-detail-img">
+                        </div>
+
+                        <div class="feature-detail-content">
+                            <h2 class="feature-detail-title">Instant Lead Generation</h2>
+                            <p class="feature-detail-desc">
+                                Our CRM system pulls incoming leads from various channels like WhatsApp, phone calls,
+                                emails, website forms, and social media - all in one centralized dashboard. This means
+                                less manual data entry and more time focusing on converting leads into customers.
+                            </p>
+
+                            <ul class="feature-detail-list">
+                                <li>Our integrated approach ensures you don't lose leads from WhatsApp or miss important
+                                    customer inquiries from various sources.</li>
+                                <li>All calls, website visitors, and social media interactions are automatically logged
+                                    and organized for easy follow-up.</li>
+                                <li>Smart lead scoring helps prioritize high-value prospects and improves conversion
+                                    rates significantly.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
