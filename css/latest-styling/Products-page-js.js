@@ -4,39 +4,39 @@ let inAllProductsMode = false;
 
 const data = [
     {
-        title: "All Products",
-        text: "Explore our entire suite of solutions crafted to empower businesses with data-driven technology and smart automation.",
-        img: "images/project-image.png",
+        title: "Our Products",
+        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
+        img: "images/Tripmeld-crm.png",
         link: "https://tripmeld.com/"
     },
     {
         title: "Travel CRM",
-        text: "A CRM built for travel agencies to streamline leads, automate quotations, and enhance client relationships efficiently.",
-        img: "images/project-image.png",
+        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
+        img: "images/Tripmeld-crm.png",
         link: "https://tripmeld.com/travelcrm"
     },
     {
         title: "Call Tracker App",
-        text: "Track and manage client calls effortlessly with our integrated Call Tracker App designed for sales and operations teams.",
-        img: "images/project-image.png",
+        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
+        img: "images/tracker-app.png",
         link: "https://tripmeld.com/calltracker"
     },
     {
         title: "Website Builder",
-        text: "Build stunning travel websites with our easy-to-use builder — no coding required, optimized for SEO and performance.",
-        img: "images/project-image.png",
+        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
+        img: "images/website-builder.png",
         link: "https://tripmeld.com/webbuilder"
     },
     {
         title: "WhatsApp Marketing",
-        text: "Engage clients instantly with WhatsApp-based campaigns, broadcast tools, and real-time engagement tracking.",
-        img: "images/project-image.png",
+        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
+        img: "images/website-builder.png",
         link: "https://tripmeld.com/whatsapp"
     },
     {
         title: "ReyferJobs",
-        text: "A powerful platform connecting employers and candidates with AI-based job recommendations and referral management.",
-        img: "images/project-image.png",
+        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
+        img: "images/tracker-app.png",
         link: "https://tripmeld.com/reyferjobs"
     }
 ];

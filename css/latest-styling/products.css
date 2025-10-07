@@ -114,15 +114,7 @@
     transition: transform 0.3s ease;
 }
 
-.link::after {
-    content: "→";
-    margin-left: 8px;
-    transition: margin-left 0.3s ease;
-}
 
-.link:hover::after {
-    margin-left: 14px;
-}
 
 /* Right content */
 .content-right {
@@ -178,7 +170,7 @@
     position: absolute;
     /* width: 400px;
     height: 500px; */
-    background: radial-gradient(circle, rgba(255, 123, 0, 0.25), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 123, 0, 0.2), transparent 70%);
     top: 0;
     right: 0;
     border-radius: 50%;
