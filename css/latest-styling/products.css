@@ -1,12 +1,11 @@
 /* ---------- SECTION ---------- */
 .page-products {
     position: relative;
-    padding: 100px 120px;
-    /* background: radial-gradient(circle at 85% 30%, rgba(255,123,0,0.1), transparent 60%),
-              radial-gradient(circle at 10% 70%, rgba(0,128,255,0.1), transparent 60%),
-              #0f0f0f; */
+    padding: 90px 120px;
+    background: radial-gradient(circle at 85% 30%, rgba(255, 123, 0, 0.1), transparent 60%),
+        radial-gradient(circle at 10% 70%, rgba(0, 128, 255, 0.1), transparent 60%),
+        #0f0f0f;
     overflow: hidden;
-    margin-top: 2%;
 }
 
 /* ---------- PRODUCT TABS ---------- */
@@ -16,7 +15,8 @@
     gap: 40px;
     margin-bottom: 60px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 12px;
+    /* padding-bottom: 12px; */
+    margin-top: 20px;
 }
 
 .product-tabs a {
@@ -28,6 +28,8 @@
     padding-bottom: 8px;
     cursor: pointer;
     transition: color 0.3s ease;
+    margin-top: 50px;
+    margin-bottom: -20px;
 }
 
 .product-tabs a:hover {
@@ -52,9 +54,11 @@
 .product-content {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     /* gap: 120px; */
     overflow: hidden;
+    padding-top: -20px;
+    height: 100%;
 }
 
 /* ---------- LEFT SIDE ---------- */
@@ -128,6 +132,16 @@
     align-items: center;
     position: relative;
     opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-right img {
+    width: 600px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 /* Keyframe animation: enter → stay → exit */
@@ -162,8 +176,8 @@
 .content-right::before {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 500px;
+    /* width: 400px;
+    height: 500px; */
     background: radial-gradient(circle, rgba(255, 123, 0, 0.25), transparent 70%);
     top: 0;
     right: 0;
