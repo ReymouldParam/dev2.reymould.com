@@ -1,168 +1,259 @@
-// For Cycling through the all products
-let subIndex = 1;
-let inAllProductsMode = false;
 
-const data = [
-    {
+/* ===== Products data (use the productsData you already had) ===== */
+const productsData = {
+    1: {
         title: "Our Products",
-        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
-        img: "images/Tripmeld-crm.png",
-        link: "https://tripmeld.com/"
+        description: "Explore our comprehensive suite of business solutions designed to streamline operations, enhance productivity, and drive growth for travel and service businesses.",
+        screenshot: "images/Tripmeld-crm.png",
+        subtitle: "TripMeld Product Suite",
+        link: "https://tripmeld.com/",
+        features: [
+            { title: "🎯 Complete Solutions", desc: "End-to-end business management tools for modern enterprises." },
+            { title: "🔧 Customizable", desc: "Tailor each product to match your specific business requirements." },
+            { title: "📱 Mobile Ready", desc: "Access all features on any device, anywhere, anytime." },
+            { title: "🔒 Secure & Reliable", desc: "Enterprise-grade security with 99.9% uptime guarantee." },
+            { title: "📈 Analytics Driven", desc: "Make data-driven decisions with comprehensive reporting." }
+        ]
     },
-    {
-        title: "Travel CRM",
-        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
-        img: "images/Tripmeld-crm.png",
-        link: "https://tripmeld.com/travelcrm"
+    2: {
+        title: "TripMeld Travel CRM",
+        description: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions.",
+        screenshot: "images/Tripmeld-crm.png",
+        subtitle: "TripMeld Travel CRM",
+        link: "https://tripmeld.com/travelcrm",
+        features: [
+            { title: "📊 Instant Lead Generation", desc: "Capture leads instantly through multiple channels and automatically organize them." },
+            { title: "🔄 Integrated Query Creation", desc: "Streamline workflow with automated query creation from customer inquiries." },
+            { title: "💬 Seamless Communication", desc: "Connect with clients through integrated messaging and call tracking." },
+            { title: "🔗 Trip/Visa Integration", desc: "Manage travel bookings and visa applications in one platform." },
+            { title: "⏱️ Real-Time View Tracking", desc: "Monitor customer interactions and engagement with detailed analytics." }
+        ]
     },
-    {
+    3: {
         title: "Call Tracker App",
-        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
-        img: "images/tracker-app.png",
-        link: "https://tripmeld.com/calltracker"
+        description: "Track and manage client data effortlessly with our integrated Call Tracker App designed for sales and operations teams. Monitor call performance, record conversations, and analyze customer interactions to improve service quality.",
+        screenshot: "images/call-tracker-app-product.png",
+        subtitle: "Call Tracker Pro",
+        link: "https://tripmeld.com/calltracker",
+        features: [
+            { title: "📞 Call Recording", desc: "Automatically record and store all customer calls for quality assurance." },
+            { title: "📈 Performance Analytics", desc: "Track call metrics, duration, and conversion rates in real-time." },
+            { title: "🎯 Lead Scoring", desc: "Automatically score leads based on call quality and conversation content." },
+            { title: "🔔 Smart Notifications", desc: "Get instant alerts for missed calls and important customer inquiries." },
+            { title: "📊 Detailed Reports", desc: "Generate comprehensive call reports for team performance evaluation." }
+        ]
     },
-    {
+    4: {
         title: "Website Builder",
-        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
-        img: "images/website-builder.png",
-        link: "https://tripmeld.com/webbuilder"
+        description: "Create stunning, professional websites without any coding knowledge. Our drag-and-drop builder comes with pre-designed templates, responsive layouts, and powerful features to establish your online presence.",
+        screenshot: "images/Tripmeld-crm.png",
+        subtitle: "Visual Website Builder",
+        link: "https://tripmeld.com/webbuilder",
+        features: [
+            { title: "🎨 Drag & Drop Editor", desc: "Build beautiful websites with intuitive drag-and-drop interface." },
+            { title: "📱 Mobile Responsive", desc: "All templates are fully responsive and mobile-optimized automatically." },
+            { title: "🚀 Fast Hosting", desc: "Lightning-fast hosting with CDN and SSL certificates included." },
+            { title: "🔧 SEO Optimized", desc: "Built-in SEO tools to help your website rank higher in search results." },
+            { title: "🛒 E-commerce Ready", desc: "Add shopping cart functionality and start selling online instantly." }
+        ]
     },
-    {
+    5: {
         title: "WhatsApp Marketing",
-        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
-        img: "images/website-builder.png",
-        link: "https://tripmeld.com/whatsapp"
+        description: "Leverage the power of WhatsApp to reach your customers directly. Send bulk messages, create automated campaigns, and manage customer conversations all from one centralized platform.",
+        screenshot: "https://via.placeholder.com/800x600/22c55e/ffffff?text=WhatsApp+Marketing+Hub",
+        subtitle: "WhatsApp Business Solution",
+        link: "https://tripmeld.com/whatsapp",
+        features: [
+            { title: "💬 Bulk Messaging", desc: "Send personalized messages to thousands of customers simultaneously." },
+            { title: "🤖 Chatbot Integration", desc: "Automate responses with AI-powered chatbots for 24/7 support." },
+            { title: "📊 Campaign Analytics", desc: "Track message delivery, open rates, and customer engagement metrics." },
+            { title: "👥 Contact Management", desc: "Organize contacts into groups and segments for targeted campaigns." },
+            { title: "📅 Scheduled Messages", desc: "Plan and schedule messages to send at optimal times automatically." }
+        ]
     },
-    {
+    6: {
         title: "ReyferJobs",
-        text: "Our experienced consultants work closely with clients to provide insights, analysis, and recommendations to help them make informed decisions and achieve their business goals. We use a data-driven approach and the latest tools and technologies to provide customized solutions that meet our clients' unique needs. Whether it's market research, competitive analysis, or business strategy development, we're here to help.",
-        img: "images/tracker-app.png",
-        link: "https://tripmeld.com/reyferjobs"
+        description: "Connect talented professionals with exciting job opportunities. Our platform streamlines the hiring process for both employers and job seekers with smart matching algorithms and comprehensive applicant tracking.",
+        screenshot: "https://via.placeholder.com/800x600/f59e0b/ffffff?text=ReyferJobs+Portal",
+        subtitle: "ReyferJobs Platform",
+        link: "https://tripmeld.com/reyferjobs",
+        features: [
+            { title: "🎯 Smart Job Matching", desc: "AI-powered algorithms match candidates with relevant job opportunities." },
+            { title: "📝 Easy Application", desc: "Simple one-click applications with resume parsing and auto-fill." },
+            { title: "🔔 Job Alerts", desc: "Instant notifications for new jobs matching candidate preferences." },
+            { title: "📊 Applicant Tracking", desc: "Comprehensive ATS for employers to manage hiring pipeline efficiently." },
+            { title: "💼 Company Profiles", desc: "Showcase company culture and values to attract top talent." }
+        ]
     }
-];
+};
 
-let current = 0;
-const total = data.length;
+/* ===== State ===== */
+let inAllProductsMode = false;
+let subIndex = 1;         // which product inside the All-Products cycle (1..6)
+let cycleTimer = null;
+const cycleInterval = 3000;  // time between nested slides (ms)
+const initialAllDelay = 2500;
+/* ===== Update DOM for a product ===== */
+function updateProductDom(productId, animated = false, showFeatures = true, showScreenshot = true) {
+    const product = productsData[productId];
+    if (!product) return;
 
-// Function to animate right content from right to left
-function animateRightContent() {
-    const $right = $(".content-right");
+    const $screenshot = $('.product-screenshot');
+    const $subtitle = $('.product-subtitle');
+    const $featureDetailSection = $('.feature-detail');
 
-    // Reset animation
-    $right.removeClass("animate");
+    // ---------- LEFT SIDE ----------
+    const $left = $('.content-left');
+    if (showScreenshot) {
+        $screenshot.attr('src', product.screenshot).show(); // ensure image visible
+        $subtitle.text(product.subtitle).show();
 
-    // Force reflow so the animation restarts
-    void $right[0].offsetWidth;
-
-    // Add animation class
-    $right.addClass("animate");
-}
-
-// Change content function
-function changeContent(i) {
-    //  if all Products Tab
-    if (i === 0) {
-        inAllProductsMode = true;
-        cycleAllProducts();
-        return;
+        if (!inAllProductsMode) {
+            $left.addClass('active'); // make left side visible
+            $left.removeClass('animate-right exit-left'); // remove animation classes
+        }
     } else {
-        inAllProductsMode = false;
+        $screenshot.hide();
+        $subtitle.hide();
     }
-    const d = data[i];
-    $(".tab-link").removeClass("active");
-    $('.tab-link[data-tab="' + (i + 1) + '"]').addClass("active");
 
-    // Slide out left for left content (optional)
-    $(".content-left").removeClass("active").addClass("exit-left");
 
-    setTimeout(() => {
-        // Update content
-        $(".content-left h1").text(d.title);
-        $(".content-left p").text(d.text);
-        $(".product-img").attr("src", d.img);
-        $(".link").attr("href", d.link).text(d.link + " →");
+    // ---------- RIGHT SIDE ----------
+    $('.product-title').text(product.title);
+    $('.product-description').text(product.description);
+    $('.product-link')
+        .attr('href', product.link)
+        .text(product.link.replace(/^https?:\/\//, '') + ' →');
 
-        // Reset exit class and fade in left content
-        $(".content-left").removeClass("exit-left").addClass("active");
+    $('.read-more').off('click').on('click', function (e) {
+        e.preventDefault();
+        window.open(product.link, '_blank');
+    });
 
-        // Animate right content from right to left
-        animateRightContent();
-    }, 400);
-}
+    const $featuresSection = $('.product-features-section'); // entire features container
+    const $featuresGrid = $('.features-grid');
+    // const $featureDetailSection = $('.feature-detail');
+    const $featureDetailTitle = $('.feature-detail-title');
+    const $featureDetailDesc = $('.feature-detail-desc');
+    const $featureDetailImg = $('.feature-detail-img');
+    const $featureDetailList = $('.feature-detail-list');
 
-// All category Products
-function cycleAllProducts() {
-    $(".tab-link").removeClass("active");
-    $('.tab-link[data-tab="1"]').addClass("active");
+    if (showFeatures) {
+        // Show features section for individual products
+        $featuresSection.show();
+        $featuresGrid.empty();
+        product.features.forEach(f => {
+            const $card = $(`<div class="feature-card"></div>`);
+            $card.html(`<h3>${f.title}</h3><p>${f.desc}</p>`);
+            $featuresGrid.append($card);
+        });
 
-    // Get Current Product to display (Skip inde 0)
-    const d = data[subIndex];
-
-    // Animate left exist 
-    $(".content-left").removeClass("active").addClass("exist-left");
-
-    setTimeout(() => {
-        // Update Content
-        $(".content-left h1").text(d.title);
-        $(".content-left p").text(d.text);
-        $(".product-img").attr("src", d.img);
-        $(".link").attr("href", d.link).text(d.link + ">");
-        $(".content-left").removeClass("exist-left").addClass("active");
-        animateRightContent();
-    }, 400);
-
-    // Increase the Subindex 
-    subIndex++;
-    if (subIndex >= total) {
-        subIndex = 1;
-        inAllProductsMode = false;
-        return;
+        // Detailed feature (bottom card)
+        if (product.features.length > 0) {
+            const firstFeature = product.features[0];
+            $featureDetailTitle.text(firstFeature.title);
+            $featureDetailDesc.text(firstFeature.desc);
+            $featureDetailImg.attr('src', product.screenshot); // or feature-specific image
+            $featureDetailList.empty();
+            product.features.forEach(f => {
+                $featureDetailList.append(`<li>${f.desc}</li>`);
+            });
+        }
+        $featureDetailSection.show();
+    } else {
+        // Hide entire features section for "All Products" loop
+        $featuresSection.hide();
     }
-    // If in All Products mode, cycle through
-    if (inAllProductsMode) {
+
+
+    if (animated && inAllProductsMode) {
+        const $left = $('.content-left');
+
+        // Remove previous animation
+        $left.removeClass('animate-right');
+
+        // Trigger reflow to restart animation
+        void $left[0].offsetWidth;
+
+        // Add animation class
+        $left.addClass('animate-right');
+    }
+
+
+    // ---------- ANIMATION ----------
+    if (animated) {
+        $('.content-left').removeClass('active').addClass('exit-left');
         setTimeout(() => {
-            cycleAllProducts();
-        }, 3000)
+            $('.content-left').removeClass('exit-left').addClass('active');
+        }, 420);
+
+        if (inAllProductsMode) {
+            $('.content-right').removeClass('animate');
+            void document.querySelector('.content-right').offsetWidth;
+            $('.content-right').addClass('animate');
+        }
+    } else {
+        $('.content-left').removeClass('exit-left').addClass('active');
+        $('.content-right').removeClass('animate');
     }
+}
 
+/* ===== All Products cycle ===== */
+function startAllProductsCycle() {
+    if (cycleTimer) clearTimeout(cycleTimer);
 
+    inAllProductsMode = true;
+    subIndex = 2;
+
+    $('.tab-link').removeClass('active');
+    $('.tab-link[data-tab="1"]').addClass('active');
+
+    // show All Products summary with screenshot
+    updateProductDom(1, true, false, true);
+
+    cycleTimer = setTimeout(function runCycle() {
+        if (!inAllProductsMode) return;
+
+        // cycle individual products with image, title, desc, link (no features)
+        updateProductDom(subIndex, true, false, true);
+
+        subIndex++;
+        const maxIndex = Object.keys(productsData).length;
+        if (subIndex > maxIndex) subIndex = 2;
+
+        cycleTimer = setTimeout(runCycle, cycleInterval);
+    }, initialAllDelay);
+}
+
+/* ===== Stop cycle ===== */
+function stopAllProductsCycle() {
+    inAllProductsMode = false;
+    if (cycleTimer) clearTimeout(cycleTimer);
+    $('.content-right').removeClass('animate');
+    $('.content-left').removeClass('exit-left').addClass('active');
 }
 
 
-// Manual tab click
-$(".tab-link").click(function () {
-    current = $(this).data("tab") - 1;
-    changeContent(current);
+/* ===== Tab click logic ===== */
+$('.tab-link').on('click', function (e) {
+    e.preventDefault();
+    const tab = parseInt($(this).attr('data-tab'), 10);
+
+    $('.tab-link').removeClass('active');
+    $(this).addClass('active');
+
+    if (tab === 1) {
+        stopAllProductsCycle();
+        startAllProductsCycle();
+    } else {
+        stopAllProductsCycle();
+        updateProductDom(tab, false, true, true);
+    }
 });
 
-// Initial load: slide in from far right
+/* ===== Initial load ===== */
 $(document).ready(function () {
-    const d = data[0];
-    $(".content-left h1").text(d.title);
-    $(".content-left p").text(d.text);
-    $(".product-img").attr("src", d.img);
-    $(".link").attr("href", d.link).text(d.link + " →");
-
-    $(".content-left").addClass("active");
-
-    // Animate right content initially
-    setTimeout(() => {
-        animateRightContent();
-    }, 100);
-
-    // Start Cycling through all The PRodcuts 
-    inAllProductsMode = true;
-    subIndex = 1;
-    setTimeout(() => {
-        cycleAllProducts();
-    }, 3000)
-    // small Delay
+    updateProductDom(1, false, true, true);
+    $('.content-left').addClass('active');
+    startAllProductsCycle();
 });
-
-// Auto-slide
-setInterval(() => {
-    // If in All Products mode, cycle through all products
-    if (inAllProductsMode) return;
-    current = (current + 1) % total;
-    changeContent(current);
-}, 5000);
