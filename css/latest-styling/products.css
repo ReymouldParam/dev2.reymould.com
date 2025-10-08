@@ -1,7 +1,7 @@
 /* ---------- SECTION ---------- */
 .page-products {
     position: relative;
-    padding: 90px 120px;
+    padding: 90px 50px;
     background: radial-gradient(circle at 85% 30%, rgba(255, 123, 0, 0.1), transparent 60%),
         radial-gradient(circle at 10% 70%, rgba(0, 128, 255, 0.1), transparent 60%),
         #0f0f0f;
