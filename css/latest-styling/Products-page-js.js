@@ -46,7 +46,7 @@ const productsData = {
     4: {
         title: "Website Builder",
         description: "Create stunning, professional websites without any coding knowledge. Our drag-and-drop builder comes with pre-designed templates, responsive layouts, and powerful features to establish your online presence.",
-        screenshot: "images/Tripmeld-crm.png",
+        screenshot: "images/website-builder-product.png",
         subtitle: "Visual Website Builder",
         link: "https://tripmeld.com/webbuilder",
         features: [
@@ -60,7 +60,7 @@ const productsData = {
     5: {
         title: "WhatsApp Marketing",
         description: "Leverage the power of WhatsApp to reach your customers directly. Send bulk messages, create automated campaigns, and manage customer conversations all from one centralized platform.",
-        screenshot: "https://via.placeholder.com/800x600/22c55e/ffffff?text=WhatsApp+Marketing+Hub",
+        screenshot: "images/whatsapp-marketing.png",
         subtitle: "WhatsApp Business Solution",
         link: "https://tripmeld.com/whatsapp",
         features: [
@@ -74,7 +74,7 @@ const productsData = {
     6: {
         title: "ReyferJobs",
         description: "Connect talented professionals with exciting job opportunities. Our platform streamlines the hiring process for both employers and job seekers with smart matching algorithms and comprehensive applicant tracking.",
-        screenshot: "https://via.placeholder.com/800x600/f59e0b/ffffff?text=ReyferJobs+Portal",
+        screenshot: "images/website-builder-product.png",
         subtitle: "ReyferJobs Platform",
         link: "https://tripmeld.com/reyferjobs",
         features: [
@@ -256,4 +256,19 @@ $(document).ready(function () {
     updateProductDom(1, false, true, true);
     $('.content-left').addClass('active');
     startAllProductsCycle();
+});
+
+
+// Videos Section - Play Button Logic
+$(document).ready(function () {
+    $(".demo-btn").on("click", function () {
+        const videoUrl = $(this).attr("data-video");
+
+        // update iframe source
+        $("#demo-video-frame").attr("src", videoUrl);
+
+        // set active button
+        $(".demo-btn").removeClass("active");
+        $(this).addClass("active");
+    });
 });
