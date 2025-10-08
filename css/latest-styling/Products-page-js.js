@@ -124,11 +124,21 @@ function updateProductDom(productId, animated = false, showFeatures = true, show
     $('.product-link')
         .attr('href', product.link)
         .text(product.link.replace(/^https?:\/\//, '') + ' →');
-
-    $('.read-more').off('click').on('click', function (e) {
+    // .text('Learn More →');
+    $('.btn').off('click').on('click', function (e) {
         e.preventDefault();
-        window.open(product.link, '_blank');
+
+        if (inAllProductsMode) {
+            stopAllProductsCycle();
+            const productIndex = productId;
+            $('.tab-link').removeClass('active');
+            $(`.tab-link[data-tab="${productIndex}"]`).addClass('active');
+            updateProductDom(productIndex, false, true, true);
+        } else {
+            // window.open(product.link, '_blank');
+        }
     });
+
 
     const $featuresSection = $('.product-features-section'); // entire features container
     const $featuresGrid = $('.features-grid');
