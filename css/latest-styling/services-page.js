@@ -117,21 +117,24 @@ $(document).ready(function () {
     cssEase: 'ease-in-out'
   });
 });
+
 // Brand Section Slick Carousel
 $(document).ready(function () {
   $(".brand-case-carousel").slick({
     vertical: true,
+    verticalSwiping: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     arrows: false,
     dots: false,
     infinite: true,
-    speed: 700,
+    speed: 800,
     cssEase: "ease-in-out",
-    pauseOnHover: false,
-    adaptiveHeight: true
+    pauseOnHover: true,
+    adaptiveHeight: false,
+    fade: false
   });
 });
 // Web Development Section Slick Carousel
@@ -220,22 +223,22 @@ $(document).ready(function () {
       "Search Engine Optimization": {
         title: "Search Engine Optimization",
         text: "Our meticulous approach ensures your logo not only looks exceptional but also communicates your brand story effectively. Let your logo speak volumes about your brand ethos with our expert design solutions.",
-        img: "seo.jpg"
+        img: "images/logos/implify-temp.png"
       },
       "Social Media Marketing": {
         title: "Social Media Marketing",
         text: "We craft data-driven strategies to enhance your social presence, increase engagement, and connect with your audience effectively across all major platforms.",
-        img: "social-media.jpg"
+        img: "images/logos/tripmeld-temp.png"
       },
       "Google Ads": {
         title: "Google Ads",
         text: "Maximize your ROI with our strategic ad campaigns, keyword targeting, and performance tracking to reach your audience at the right moment.",
-        img: "google-ads.jpg"
+        img: "images/logos/techcelerate-temp.png"
       },
       "Content Marketing": {
         title: "Content Marketing",
         text: "Our content experts create compelling, SEO-optimized stories that attract, educate, and convert your target audience.",
-        img: "content.jpg"
+        img: "images/logos/sarojini-temp.png"
       }
     };
 

@@ -689,17 +689,19 @@
     }
 }
 
-
 /* ********************* Brand Services  */
 .brand-section {
-    /* background: linear-gradient(180deg, #000000 0%, #1b1b1b 100%); */
     color: #fff;
-    /* padding: 60px 0; */
     display: flex;
     justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.brand-container {}
+.brand-container {
+    width: 100%;
+    padding: 0 20px;
+}
 
 .brand-header {
     display: flex;
@@ -708,6 +710,7 @@
     flex-wrap: wrap;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 25px;
+    gap: 20px;
 }
 
 .brand-title {
@@ -716,14 +719,15 @@
     color: #ff7a00 !important;
     flex: 1;
     margin: 0;
+    min-width: 250px;
 }
 
 .brand-subtitle {
     flex: 2;
     font-size: 0.95rem;
     color: #ccc;
-    margin-top: 10px;
     line-height: 1.6;
+    min-width: 300px;
 }
 
 .brand-content {
@@ -741,15 +745,14 @@
     font-size: 0.95rem;
     line-height: 1.7;
     color: #ddd;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .brand-grid {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 50px;
-    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -758,6 +761,7 @@
     flex-direction: column;
     gap: 20px;
     flex: 1;
+    min-width: 250px;
 }
 
 .brand-item {
@@ -776,16 +780,36 @@
     background: #0058ff;
 }
 
-.brand-case {
+/* ===== Vertical Carousel Styling ===== */
+.brand-case-carousel {
     flex: 1.2;
+    max-width: 400px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-case {
     text-align: center;
-    max-width: 350px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    outline: none;
+    height: 450px !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .brand-case-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 15px;
+    color: #fff;
 }
 
 .brand-case-text {
@@ -799,61 +823,6 @@
     width: 140px;
     height: auto;
     margin-top: 10px;
-}
-
-/* ===== Vertical Carousel Styling (Optimized) ===== */
-.brand-case-carousel {
-    flex: 1.2;
-    /* max-width: 350px; */
-    height: 100%;
-    /* Adjust this based on your content height */
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Each brand case item */
-.brand-case-carousel .brand-case {
-    text-align: center;
-    color: #fff;
-    padding: 0px;
-    box-sizing: border-box;
-    /* background: rgba(255, 255, 255, 0.03);
-    border-radius: 10px; */
-    transition: all 0.4s ease-in-out;
-}
-
-/* Smooth spacing for each slide */
-.slick-vertical .slick-slide {
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    margin: 10px 0;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Hide overflow shadows and spacing from Slick */
-.slick-list {
-    overflow: hidden !important;
-}
-
-/* Optional: Add a subtle shadow to active slide */
-.brand-case-carousel .slick-current .brand-case {
-    background: rgba(255, 255, 255, 0.05);
-    transform: scale(1.02);
-}
-
-/* Logo inside each case */
-.brand-case-logo {
-    width: 120px;
-    height: auto;
-    margin-top: 10px;
     opacity: 0.9;
     transition: opacity 0.3s ease;
 }
@@ -862,24 +831,86 @@
     opacity: 1;
 }
 
+/* Slick Carousel Overrides */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    height: 450px;
+}
 
+.slick-list {
+    position: relative;
+    overflow: hidden !important;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 450px !important;
+}
 
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+}
 
+.slick-slide {
+    float: left;
+    height: 450px !important;
+    min-height: 450px;
+    display: none;
+}
 
-/* Responsive */
-@media (max-width: 992px) {
+.slick-slide.slick-active {
+    display: block;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: 400px !important;
+    border: none;
+}
+
+.slick-slide>div {
+    height: 450px;
+}
+
+/* Remove default Slick styling */
+.slick-dots,
+.slick-arrow {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
     .brand-grid {
         flex-direction: column;
         align-items: center;
     }
 
-    .brand-list {
-        align-items: center;
+    .brand-case-carousel {
+        max-width: 100%;
+        width: 100%;
     }
 
-    .brand-item {
-        width: 80%;
-        text-align: center;
+    .brand-list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-title {
+        font-size: 1.5rem;
+    }
+
+    .brand-highlight {
+        font-size: 1.2rem;
+    }
+
+    .brand-case-carousel {
+        min-height: 350px;
     }
 }
 
