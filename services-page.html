@@ -45,10 +45,12 @@
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
     <!-- Slick Carousel  -->
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Slick Theme (optional) -->
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -376,15 +378,10 @@
                                 </p>
                             </div>
                             <div class="concepts-display">
-                                <div class="concept-item"><img src="https://via.placeholder.com/200x150?text=Concept+1"
-                                        alt=""></div>
-                                <div class="concept-item"><img src="https://via.placeholder.com/200x150?text=Concept+2"
-                                        alt=""></div>
-                                <div class="jhansi-logo">JHANSI</div>
-                                <div class="concept-item"><img src="https://via.placeholder.com/200x150?text=Concept+3"
-                                        alt=""></div>
-                                <div class="concept-item"><img src="https://via.placeholder.com/200x150?text=Concept+4"
-                                        alt=""></div>
+                                <div class="concepts-display">
+                                    <img src="videos/gif-rm.gif" alt="Animated Graphic" class="concepts-gif" />
+                                </div>
+
                             </div>
                         </div>
                         <hr />
@@ -426,59 +423,95 @@
                                             <img src="images/logos/tripmeld-temp.png" alt="Template 5" />
                                         </div>
                                     </div>
+                                    <div class="template-slide">
+                                        <div class="template-card">
+                                            <img src="images/logos/implify-temp.png" alt="Template 6" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <hr />
-                        <!-- Branding -->
                         <div class="branding-section">
-                            <h3 class="section-title">Branding</h3>
+                            <div class="templates-header">
+                                <h3>Branding</h3>
+                                <p>
+                                    Transform your brand identity with our expert logo designing services. Our creative
+                                    team crafts unique logos that resonate with your business values, leaving a lasting
+                                    impression on your audience
+                                </p>
+                            </div>
+
                             <div class="branding-grid">
+                                <!-- Brochure Designs - Vertical Carousel (Top to Bottom) -->
                                 <div class="branding-card">
                                     <h4>Brochure Designs</h4>
-                                    <div class="branding-display">
-                                        <img src="https://via.placeholder.com/200x250?text=Brochure+Design"
-                                            alt="Brochure Design">
+                                    <div class="brochure-carousel-wrapper">
+                                        <div class="brochure-carousel">
+                                            <div class="carousel-slide">
+                                                <img src="images/Brochure-design1.png" alt="Brochure 1" />
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img src="images/Brochure-design2.png" alt="Brochure 2" />
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img src="images/Brochure-Design3.png" alt="Brochure 3" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
+                                <!-- Creative Design - Vertical (Bottom to Top) -->
+                                <div class="branding-card">
+                                    <h4>Creatives Design</h4>
+                                    <div class="creative-design-wrapper">
+                                        <div class="creative-design-carousel">
+                                            <div class="carousel-slide">
+                                                <img src="images/creative-Design1.png" alt="Creative 1" />
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img src="images/Creative-Design2.png" alt="Creative 2" />
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img src="images/Creative-Design3.png" alt="Creative 3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Brand Style Guideline - Horizontal (Right to Left) -->
                                 <div class="branding-card">
                                     <h4>Brand Style Guideline</h4>
-                                    <div class="branding-display">
-                                        <img src="https://via.placeholder.com/200x250?text=Brand+Guideline"
-                                            alt="Brand Guideline">
-                                    </div>
-                                </div>
-
-                                <div class="branding-card">
-                                    <h4>Creative Design</h4>
-                                    <div class="branding-display">
-                                        <img src="https://via.placeholder.com/250x200?text=Creative+Design"
-                                            alt="Creative Design">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Visiting Cards -->
-                        <div class="visiting-cards-section">
-                            <h3 class="section-title">Visiting Card</h3>
-                            <div class="cards-grid">
-                                <div class="card-display">
-                                    <h4>Visiting Card</h4>
-                                    <div class="card-preview">
-                                        <img src="https://via.placeholder.com/300x180?text=Card+Front"
-                                            alt="Card Front" />
-                                    </div>
-                                </div>
-                                <div class="card-display">
-                                    <h4>Visiting Card</h4>
-                                    <div class="card-preview">
-                                        <img src="https://via.placeholder.com/300x180?text=Card+Back" alt="Card Back" />
+                                    <div class="brand-guideline-wrapper"> <!--  FIXED -->
+                                        <div class="brand-guideline-carousel">
+                                            <div class="carousel-slide">
+                                                <img src="images/brand-guiline-img1.png" alt="Brand Guide 1" />
+                                            </div>
+                                            <div class="carousel-slide">
+                                                <img src="images/brand-guilines-img2.png" alt="Brand Guide 2" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <hr />
+                        <div>
+                            <h4>
+                                Visiting Cards Designs
+                            </h4>
+                            <div
+                                style="display:flex;gap: 20px; justify-content: space-between; align-items: center; border: 1px solid #fff; border-radius: 15px;padding: 20px;">
+                                <!-- <div>
+                                <img src="images/Visiting-card1.png" alt="Visiting Card 1" class="visiting-card" />
+                            </div> -->
+                                <div>
+                                    <img src="images/Visiting-card2.png" alt="Visiting Card 2" />
+                                </div>
+                                <div>
+                                    <img src="images/Visiting-card-frame.png" alt="Visiting-card-frame" />
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <!-- Brand Consulting Overview  -->
                     <div class="brand-section">
@@ -520,18 +553,56 @@
                                         <div class="brand-item">• Payroll Management</div>
                                     </div>
 
-                                    <div class="brand-case">
-                                        <h4 class="brand-case-title">ReyferJobs</h4>
-                                        <p class="brand-case-text">
-                                            Elevated the Reyfer Jobs brand with a compelling logo, dynamic social media
-                                            marketing, effective SEO
-                                            strategies, and a user-friendly website. This comprehensive approach not
-                                            only enhanced their digital
-                                            footprint but also fostered valuable connections and opportunities in their
-                                            industry.
-                                        </p>
-                                        <img src="https://via.placeholder.com/150x80" alt="ReyferJobs Logo"
-                                            class="brand-case-logo" />
+                                    <!-- Slick Vertical Carousel -->
+                                    <div class="brand-case-carousel">
+                                        <div class="brand-case">
+                                            <h4 class="brand-case-title">ReyferJobs</h4>
+                                            <p class="brand-case-text">
+                                                Elevated the Reyfer Jobs brand with a compelling logo, dynamic social
+                                                media marketing,
+                                                effective SEO strategies, and a user-friendly website. This
+                                                comprehensive approach not only
+                                                enhanced their digital footprint but also fostered valuable connections
+                                                and opportunities in
+                                                their industry.
+                                            </p>
+                                            <img src="clients-logos/reyferjobs.svg" alt="ReyferJobs Logo"
+                                                class="brand-case-logo" />
+                                        </div>
+
+                                        <div class="brand-case">
+                                            <h4 class="brand-case-title">Livon Paints</h4>
+                                            <p class="brand-case-text">
+                                                Revitalized Livon Paints’ brand identity with strong positioning,
+                                                creative ad campaigns, and cohesive
+                                                visual branding that highlights durability and innovation.
+                                            </p>
+                                            <img src="clients-logos/BVB-LOGO.svg" alt="Livon Paints Logo"
+                                                class="brand-case-logo" />
+                                        </div>
+
+                                        <div class="brand-case">
+                                            <h4 class="brand-case-title">Futera</h4>
+                                            <p class="brand-case-text">
+                                                Crafted a cultural identity for Telugu Aromas through appealing design,
+                                                storytelling visuals,
+                                                and targeted marketing — making it a go-to spot for authentic Telugu
+                                                flavors.
+                                            </p>
+                                            <img src="clients-logos/futera.svg" alt="Futera Logo"
+                                                class="brand-case-logo" />
+                                        </div>
+
+                                        <div class="brand-case">
+                                            <h4 class="brand-case-title">TripMeld</h4>
+                                            <p class="brand-case-text">
+                                                Developed a modern, professional brand strategy for TripMeld —
+                                                integrating design, UX, and communication
+                                                to position it as an innovative travel CRM leader.
+                                            </p>
+                                            <img src="clients-logos/tripmeld.svg" alt="TripMeld Logo"
+                                                class="brand-case-logo" />
+                                        </div>
                                     </div>
 
                                     <div class="brand-list right">
@@ -585,8 +656,7 @@
                                                 Let your logo speak volumes about your brand ethos with our expert
                                                 design solutions.
                                             </p>
-                                            <img src="https://via.placeholder.com/250x150" alt="SEO Graphic"
-                                                class="dm-card-image" />
+                                            <img src="" alt="SEO Graphic" class="dm-card-image" />
                                         </div>
                                     </div>
                                 </div>
@@ -624,8 +694,7 @@
                             <div class="webdev-showcase">
                                 <div class="webdev-client-title">Sarojini Dental</div>
                                 <div class="webdev-image-frame">
-                                    <img src="Screenshot-2025-10-08-175410.jpg"
-                                        alt="Sarojini Dental Website Screenshot">
+                                    <img src="" alt="Sarojini Dental Website Screenshot">
                                 </div>
                             </div>
                         </div>
@@ -733,8 +802,12 @@
     <script src="js/owl.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!--  SCRIPT -->
+    <!-- jQuery (required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Service page -->
     <script src="css/latest-styling/services-page.js"></script>
 </body>
 

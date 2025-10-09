@@ -280,16 +280,21 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 30px; */
-    display: grid;
-    grid-template-columns: 300px 1fr;
+    /* display: grid;
+    grid-template-columns: 300px 1fr; */
     gap: 30px;
     margin-top: 40px;
+    display: grid;
+    /* align-items: center; */
+    justify-content: space-between;
+    grid-template-columns: 550px 1fr;
 }
 
 .concepts-text h3 {
     color: #f7931e;
-    font-size: 18px;
+    font-size: 28px;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .concepts-text p {
@@ -309,16 +314,18 @@
     border-radius: 8px;
 }
 
-.jhansi-logo {
-    grid-column: 1 / -1;
-    background: #1e3a8a;
-    color: #fff;
-    font-size: 42px;
-    font-weight: 300;
-    letter-spacing: 8px;
-    text-align: center;
-    padding: 40px;
-    border-radius: 8px;
+.concepts-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+}
+
+.concepts-gif {
+    max-width: 100%;
+    /* adjust as needed */
+    height: auto;
+    border-radius: 10px;
 }
 
 
@@ -368,22 +375,33 @@
     transition: all 0.4s ease;
     transform: scale(0.85);
     opacity: 0.5;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
 }
 
 .template-card img {
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
+    /* transition: all 0.4s ease; */
 }
 
 .slick-center .template-card {
     transform: scale(1);
     opacity: 1;
     z-index: 10;
-    box-shadow: 0 20px 60px rgba(247, 147, 30, 0.8);
+    margin: 0 !important;
+    padding: 0 !important;
 
 }
 
+.slick-center .template-card img {
+    box-shadow: 0 20px 60px rgba(247, 147, 30, 0.8);
+    margin: 0 !important;
+}
 
 /* Slick Arrows */
 .slick-prev,
@@ -451,66 +469,226 @@
     }
 }
 
-/* Branding */
+.branding-section {
+    /* max-width: 1400px; */
+    margin: 0 auto;
+}
+
+.templates-header {
+    /* background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px 30px; */
+    margin-bottom: 40px;
+}
+
+.templates-header h3 {
+    color: #f7931e;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.templates-header p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 .branding-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 
+
 .branding-card {
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.3); */
+    border: 1px solid #fff;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.branding-card>h4 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Brochure Designs - Vertical Carousel */
+.brochure-carousel-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.brochure-carousel .branding-display {
+    padding: 10px;
+}
+
+.brochure-carousel .branding-display img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.brand-guideline-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.brand-guideline-carousel .carousel-slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Creative Design - Vertical Up to Down */
+.creative-design-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.creative-design-carousel .branding-display {
+    padding: 10px;
+}
+
+.creative-design-carousel .branding-display img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .branding-display {
-    background: rgba(255, 255, 255, 0.05);
+    outline: none;
+}
+
+.brand-guideline-wrapper,
+.creative-design-wrapper,
+.brochure-carousel-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.brochure-carousel .carousel-slide img,
+.brand-guideline-carousel .carousel-slide img,
+.creative-design-carousel .carousel-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
     border-radius: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .branding-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .brochure-carousel-wrapper,
+    .brand-guideline-wrapper,
+    .creative-design-wrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .templates-header h3 {
+        font-size: 22px;
+    }
+
+    .brochure-carousel-wrapper,
+    .brand-guideline-wrapper,
+    .creative-design-wrapper {
+        height: 350px;
+    }
+}
+
+/* Section basics */
+.visiting-cards-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+/* Container for both sides */
+.visiting-cards-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 250px;
+    justify-content: space-between;
 }
 
-.branding-display img {
-    max-width: 100%;
-    border-radius: 10px;
+/* Left side cards */
+.left-cards {
+    position: relative;
+    width: 360px;
+    /* match your image width */
 }
 
-/* Visiting Cards */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.card-display {
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.card-preview img {
+.left-cards img {
     width: 100%;
     border-radius: 10px;
+    display: block;
 }
 
-/* Responsive */
+/* Make the second card slightly overlap the first one */
+.left-cards .back-card {
+    position: absolute;
+    top: 15px;
+    /* how much lower it appears */
+    left: 15px;
+    /* how much to the right it appears */
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.left-cards .front-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* Right card */
+.right-card img {
+    width: 360px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Responsive behavior */
 @media (max-width: 992px) {
-    .concepts-showcase {
-        grid-template-columns: 1fr;
+    .visiting-cards-container {
+        flex-direction: column;
+        gap: 40px;
     }
 
-    .templates-grid,
-    .branding-grid,
-    .cards-grid,
-    .logo-grid {
-        grid-template-columns: 1fr;
+    .left-cards {
+        width: 100%;
+    }
+
+    .right-card img {
+        width: 100%;
+    }
+
+    .left-cards .back-card {
+        top: 10px;
+        left: 10px;
     }
 }
+
 
 /* ********************* Brand Services  */
 .brand-section {
@@ -535,7 +713,7 @@
 .brand-title {
     font-size: 2rem;
     font-weight: 600;
-    color: #ff7a00;
+    color: #ff7a00 !important;
     flex: 1;
     margin: 0;
 }
@@ -586,7 +764,7 @@
     background: #0046c2;
     color: #fff;
     font-size: 0.9rem;
-    padding: 12px 18px;
+    padding: 5px 18px;
     border-radius: 4px;
     font-weight: 500;
     width: fit-content;
@@ -623,6 +801,71 @@
     margin-top: 10px;
 }
 
+/* ===== Vertical Carousel Styling (Optimized) ===== */
+.brand-case-carousel {
+    flex: 1.2;
+    /* max-width: 350px; */
+    height: 100%;
+    /* Adjust this based on your content height */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Each brand case item */
+.brand-case-carousel .brand-case {
+    text-align: center;
+    color: #fff;
+    padding: 0px;
+    box-sizing: border-box;
+    /* background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px; */
+    transition: all 0.4s ease-in-out;
+}
+
+/* Smooth spacing for each slide */
+.slick-vertical .slick-slide {
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 10px 0;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide overflow shadows and spacing from Slick */
+.slick-list {
+    overflow: hidden !important;
+}
+
+/* Optional: Add a subtle shadow to active slide */
+.brand-case-carousel .slick-current .brand-case {
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.02);
+}
+
+/* Logo inside each case */
+.brand-case-logo {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.brand-case-logo:hover {
+    opacity: 1;
+}
+
+
+
+
+
 /* Responsive */
 @media (max-width: 992px) {
     .brand-grid {
@@ -656,7 +899,7 @@
 
 .dm-heading {
     font-size: 32px;
-    color: #f58220;
+    color: #ff7a00 !important;
     font-weight: 700;
 }
 
@@ -762,6 +1005,12 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.dm-service-item.active {
+    background: #0051ff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+
 
 /****************************** Web Development  */
 
@@ -781,7 +1030,7 @@
 .webdev-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ff8c2d;
+    color: #ff7a00 !important;
     letter-spacing: 1px;
     margin: 0;
 }
