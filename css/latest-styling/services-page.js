@@ -137,59 +137,69 @@ $(document).ready(function () {
     fade: false
   });
 });
-// Web Development Section Slick Carousel
+// Web Development Section Auto-Rotate Showcase
 $(document).ready(function () {
-  // Dummy data
+  // Showcase data
   const showcaseData = [
     {
       title: "TripMeld CRM",
-      image: "images/logos/implify-temp.png",
+      img: "images/logos/tripmeld-temp.png",
       link: "https://tripmeld.com/"
     },
     {
       title: "Reymould Branding",
-      image: "images/logos/tripmeld-temp.png",
+      img: "images/logos/implify-temp.png",
       link: "https://reymould.com/"
     },
     {
       title: "Sarojini Dental",
-      image: "images/logos/sarojini-temp.png",
+      img: "images/logos/sarojini-temp.png",
       link: "https://sarojinidental.com/"
     },
     {
       title: "Techcelerate",
-      image: "images/logos/techcelerate-temp.png",
+      img: "images/logos/sarojini-temp.png",
       link: "https://techcelerate.io/"
     }
   ];
 
   let currentIndex = 0;
+  const $images = $('#laptop-screen img');
+  const totalImages = showcaseData.length;
 
   function updateShowcase() {
     const item = showcaseData[currentIndex];
 
-    // Fade-out current image and text
-    $(".webdev-image-frame img, .webdev-client-title, .webdev-link").fadeOut(300, function () {
-      // Update content
-      $(".webdev-client-title").text(item.title);
-      $(".webdev-image-frame img").attr("src", item.image).attr("alt", item.title);
-      $(".webdev-link").attr("href", item.link).text(item.link);
+    // Update the image src before fading
+    const $currentImg = $images.filter('.active');
+    const $nextImg = $images.eq(currentIndex);
 
-      // Fade-in new content
-      $(".webdev-image-frame img, .webdev-client-title, .webdev-link").fadeIn(400);
+    // Set the correct image source from showcaseData
+    $nextImg.attr('src', item.img);
+
+    // Fade out text
+    $('#webdev-client-title, #webdev-dynamic-link').fadeOut(300, function () {
+      $('#webdev-client-title').text(item.title);
+      $('#webdev-dynamic-link').attr('href', item.link).text(item.link);
+      $('#webdev-client-title, #webdev-dynamic-link').fadeIn(400);
     });
 
-    // Move to next image
-    currentIndex = (currentIndex + 1) % showcaseData.length;
+    // Fade out current image
+    $currentImg.fadeOut(400, function () {
+      $currentImg.removeClass('active');
+      $nextImg.addClass('active').fadeIn(500);
+    });
+
+    // Move to next index
+    currentIndex = (currentIndex + 1) % totalImages;
   }
 
-  // Initial load
-  updateShowcase();
 
-  // Change every 4 seconds
-  setInterval(updateShowcase, 4000);
+  // Start auto-rotation after 3 seconds
+  setTimeout(function () {
+    setInterval(updateShowcase, 4000);
+  }, 3000);
 });
-
 
 // Digital Marketing Section Slick Carousel
 $(document).ready(function () {
