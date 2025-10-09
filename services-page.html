@@ -44,6 +44,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    <!-- Slick Carousel  -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body>
@@ -327,20 +332,38 @@
                         </div>
 
                         <!-- Logo Designs -->
-                        <div class="logo-designs-section">
-                            <h3 class="section-title">Logo Designs With Concepts</h3>
-                            <div class="company-logo-grid">
-                                <div class="company-logo-box"><img src="https://via.placeholder.com/150x80?text=Logo+1"
-                                        alt="Logo 1" /></div>
-                                <div class="company-logo-box"><img src="https://via.placeholder.com/150x80?text=Logo+2"
-                                        alt="Logo 2" /></div>
-                                <div class="company-logo-box"><img src="https://via.placeholder.com/150x80?text=Logo+3"
-                                        alt="Logo 3" /></div>
-                                <div class="company-logo-box"><img src="https://via.placeholder.com/150x80?text=Logo+4"
-                                        alt="Logo 4" /></div>
+                        <div class="logo-marquee" aria-label="Company logos ticker">
+                            <div class="marquee-track" role="list">
+                                <!-- original set -->
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/vircfo.svg"
+                                        alt="Logo 1"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/futera.svg"
+                                        alt="Logo 2"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/miaavi.svg"
+                                        alt="Logo 3"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/tripmeld.svg"
+                                        alt="Logo 4"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/yarao.svg"
+                                        alt="Logo 5"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/BVB-LOGO.svg"
+                                        alt="Logo 6"></div>
+
+                                <!-- duplicate the same set for smooth infinite loop -->
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/vircfo.svg"
+                                        alt="Logo 1"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/futera.svg"
+                                        alt="Logo 2"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/miaavi.svg"
+                                        alt="Logo 3"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/tripmeld.svg"
+                                        alt="Logo 4"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/yarao.svg"
+                                        alt="Logo 5"></div>
+                                <div class="company-logo-box" role="listitem"><img src="clients-logos/BVB-LOGO.svg"
+                                        alt="Logo 6"></div>
+
                             </div>
                         </div>
-
                         <!-- Logo Concepts Showcase -->
                         <div class="concepts-showcase">
                             <div class="concepts-text">
@@ -364,31 +387,49 @@
                                         alt=""></div>
                             </div>
                         </div>
-
+                        <hr />
                         <!-- Website Templates -->
                         <div class="templates-section">
                             <div class="templates-header">
                                 <h3>Customized Website Templates</h3>
                                 <p>
-                                    Custom-built website designs that are both beautiful and functional. Our curated
-                                    collection offers various layouts designed to adapt to your unique business
-                                    requirements, ensuring a perfect blend of aesthetics and user experience that drives
-                                    engagement and conversions.
+                                    Transform your brand identity with our expert logo designing services. Our creative
+                                    team crafts unique logos that resonate with your business values, leaving a lasting
+                                    impression on your audience
                                 </p>
                             </div>
-                            <div class="templates-grid">
-                                <div class="template-card"><img
-                                        src="https://via.placeholder.com/350x200?text=Template+1" alt="Template 1" />
-                                </div>
-                                <div class="template-card"><img
-                                        src="https://via.placeholder.com/350x200?text=Template+2" alt="Template 2" />
-                                </div>
-                                <div class="template-card"><img
-                                        src="https://via.placeholder.com/350x200?text=Template+3" alt="Template 3" />
+
+                            <div class="templates-carousel-wrapper">
+                                <div class="templates-carousel">
+                                    <div class="template-slide">
+                                        <div class="template-card">
+                                            <img src="images/logos/techcelerate-temp.png" alt="Template 1" />
+                                        </div>
+                                    </div>
+                                    <div class="template-slide">
+                                        <div class="template-card">
+                                            <img src="images/logos/Sarojini-temp.png" alt="Template 2" />
+                                        </div>
+                                    </div>
+                                    <div class="template-slide">
+                                        <div class="template-card">
+                                            <img src="images/logos/tripmeld-temp.png" alt="Template 3" />
+                                        </div>
+                                    </div>
+                                    <div class="template-slide">
+                                        <div class="template-card">
+                                            <img src="images/logos/east-hug-temp.png" alt="Template 4" />
+                                        </div>
+                                    </div>
+                                    <div class="template-slide">
+                                        <div class="template-card">
+                                            <img src="images/logos/tripmeld-temp.png" alt="Template 5" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
+                        <hr />
                         <!-- Branding -->
                         <div class="branding-section">
                             <h3 class="section-title">Branding</h3>
@@ -691,7 +732,8 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/owl.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <!--  SCRIPT -->
     <script src="css/latest-styling/services-page.js"></script>
 </body>

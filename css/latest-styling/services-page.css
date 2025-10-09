@@ -90,7 +90,7 @@
     background: #F8F8FF1F;
     border-radius: 20px;
     border: 0.5px solid #fff;
-    padding: 40px;
+    padding: 30px;
     backdrop-filter: blur(10px);
 }
 
@@ -180,6 +180,12 @@
 
 /*********************** Desing Service  */
 /* Header */
+.design-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .design-header h2 {
     color: #f7931e;
     font-size: 32px;
@@ -209,30 +215,71 @@
     gap: 20px;
 }
 
-.company-logo-box {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    padding: 35px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
+.logo-marquee {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    background: transparent;
 }
 
-.company-logo-box:hover {
-    transform: translateY(-5px);
+.marquee-track {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    /* duplicate content will allow seamless loop when we translate -50% */
+    width: max-content;
+    animation: marquee 18s linear infinite;
+}
+
+.company-logo-box {
+    flex: 0 0 auto;
 }
 
 .company-logo-box img {
-    max-width: 80%;
+    display: block;
+    height: 160px;
+    width: auto;
+}
+
+/* pause on hover */
+.logo-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* move left half (because we duplicate) */
+}
+
+/* small-screen adjustments */
+@media (max-width: 480px) {
+    .company-logo-box img {
+        height: 60px;
+    }
+
+    .marquee-track {
+        gap: 14px;
+    }
+
+    .logo-marquee {
+        padding: 8px 0;
+    }
 }
 
 /* Concepts */
 .concepts-showcase {
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 30px;
+    padding: 30px; */
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 30px;
@@ -274,44 +321,134 @@
     border-radius: 8px;
 }
 
-/* Templates */
+
+/* Templagtes Section */
 .templates-section {
-    margin-top: 60px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .templates-header {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 25px 30px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
+
 
 .templates-header h3 {
     color: #f7931e;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .templates-header p {
     color: #999;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.templates-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.templates-carousel-wrapper {
+    position: relative;
+    padding: 40px 0;
+}
+
+.templates-carousel {
+    margin: 0 auto;
+}
+
+.template-slide {
+    padding: 0;
+    outline: none;
+}
+
+.template-card {
+    position: relative;
+    transition: all 0.4s ease;
+    transform: scale(0.85);
+    opacity: 0.5;
 }
 
 .template-card img {
     width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    height: 100%;
+    object-fit: cover;
 }
 
-.template-card:hover img {
-    transform: translateY(-5px);
+.slick-center .template-card {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0 20px 60px rgba(247, 147, 30, 0.8);
+
+}
+
+
+/* Slick Arrows */
+.slick-prev,
+.slick-next {
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: #f7931e;
+    opacity: 0.7;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+    opacity: 1;
+}
+
+.slick-prev {
+    left: -60px;
+}
+
+.slick-next {
+    right: -60px;
+}
+
+/* Slick Dots */
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #f7931e;
+    opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #f7931e;
+}
+
+@media (max-width: 768px) {
+    .templates-header h3 {
+        font-size: 22px;
+    }
+
+    .templates-header p {
+        font-size: 13px;
+    }
+
+    .template-card img {
+        height: 250px;
+    }
+
+    .slick-prev {
+        left: -30px;
+    }
+
+    .slick-next {
+        right: -30px;
+    }
 }
 
 /* Branding */
@@ -629,110 +766,110 @@
 /****************************** Web Development  */
 
 .webdev-section {
-  color: #fff;
- 
+    color: #fff;
+
 }
 
 .webdev-header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .webdev-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #ff8c2d;
-  letter-spacing: 1px;
-  margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff8c2d;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 .webdev-top-desc {
-  font-size: 0.86rem;
-  color: #e8e8e8;
-  width: 49%;
-  text-align: right;
-  font-weight: 400;
-  margin-top: 5px;
+    font-size: 0.86rem;
+    color: #e8e8e8;
+    width: 49%;
+    text-align: right;
+    font-weight: 400;
+    margin-top: 5px;
 }
 
 .webdev-content {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 12px;
 }
 
 .webdev-info {
-  flex: 1.1;
-  background: rgba(41, 42, 50, 0.26);
-  border-radius: 18px;
-  padding: 22px 20px 16px 22px;
-  border: 1px solid #343648;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    flex: 1.1;
+    background: rgba(41, 42, 50, 0.26);
+    border-radius: 18px;
+    padding: 22px 20px 16px 22px;
+    border: 1px solid #343648;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .webdev-highlight {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #ff8c2d;
-  margin-bottom: 13px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ff8c2d;
+    margin-bottom: 13px;
 }
 
 .webdev-desc {
-  font-size: 1rem;
-  color: #e6e6e6;
-  margin-bottom: 13px;
-  font-weight: 410;
-  line-height: 1.5;
+    font-size: 1rem;
+    color: #e6e6e6;
+    margin-bottom: 13px;
+    font-weight: 410;
+    line-height: 1.5;
 }
 
 .webdev-link {
-  font-size: 0.98rem;
-  color: #ff8c2d;
-  text-decoration: underline;
-  margin-top: 10px;
-  display: inline-block;
+    font-size: 0.98rem;
+    color: #ff8c2d;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .webdev-showcase {
-  flex: 1.1;
-  background: rgba(41, 42, 50, 0.16);
-  border-radius: 16px;
-  border: 1px solid #343648;
-  padding: 20px 18px 12px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+    flex: 1.1;
+    background: rgba(41, 42, 50, 0.16);
+    border-radius: 16px;
+    border: 1px solid #343648;
+    padding: 20px 18px 12px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .webdev-client-title {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 540;
-  margin-bottom: 10px;
-  text-align: left;
-  width: 100%;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 540;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
 }
 
 .webdev-image-frame {
-  width: 310px;
-  max-width: 100%;
-  background: #181a21;
-  border-radius: 12px;
-  box-shadow: 0 3px 18px rgba(60, 130, 230, 0.18);
-  border: 1.5px solid #2e3142;
-  overflow: hidden;
-  padding: 0 0 4px 0;
+    width: 310px;
+    max-width: 100%;
+    background: #181a21;
+    border-radius: 12px;
+    box-shadow: 0 3px 18px rgba(60, 130, 230, 0.18);
+    border: 1.5px solid #2e3142;
+    overflow: hidden;
+    padding: 0 0 4px 0;
 }
 
 .webdev-image-frame img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
 }

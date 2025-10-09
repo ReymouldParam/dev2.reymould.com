@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
   // ===== Fade-in Animation on Scroll =====
-  $(window).on('scroll', function() {
-    $('.fade-in, .design-services-container, .brand-section, .digital-marketing-wrapper, .webdev-section').each(function() {
+  $(window).on('scroll', function () {
+    $('.fade-in, .design-services-container, .brand-section, .digital-marketing-wrapper, .webdev-section').each(function () {
       var top = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -19,7 +19,7 @@ $(document).ready(function() {
   $('.design-services-container, .brand-section, .digital-marketing-wrapper, .webdev-section').hide();
 
   // ===== Tab Button Functionality =====
-  $('.tab-btn').click(function() {
+  $('.tab-btn').click(function () {
     var filter = $(this).attr('data-filter');
 
     // Remove 'active' class from all, add to clicked one
@@ -30,7 +30,7 @@ $(document).ready(function() {
     $('.service-box, .design-services-container, .brand-section, .digital-marketing-wrapper, .webdev-section').hide();
 
     // ===== Show Section Based on Tab =====
-    switch(filter) {
+    switch (filter) {
       case 'all':
         $('.service-box').fadeIn(500);
         break;
@@ -49,4 +49,35 @@ $(document).ready(function() {
     }
   });
 
+});
+
+// Service PAGE Templates Slick Carousel.
+$(document).ready(function () {
+  $('.templates-carousel').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    dots: false,
+    arrows: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: '0px'
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '0px'
+        }
+      }
+    ]
+  });
 });
