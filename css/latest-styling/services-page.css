@@ -89,7 +89,7 @@
 .services-wrapper {
     background: #F8F8FF1F;
     border-radius: 20px;
-    border: 0.5px solid #fff;
+    /* border: 0.5px solid #fff; */
     padding: 30px;
     backdrop-filter: blur(10px);
 }
@@ -179,6 +179,19 @@
 }
 
 /*********************** Desing Service  */
+
+.design-services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.design-section {
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 20px 20px;
+}
+
 /* Header */
 .design-header {
     display: flex;
@@ -198,6 +211,7 @@
     font-size: 14px;
     line-height: 1.6;
     max-width: 900px;
+    font-weight: 600;
 }
 
 /* Sections */
@@ -299,8 +313,9 @@
 
 .concepts-text p {
     color: #999;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
+    font-weight: 600;
 }
 
 .concepts-display {
@@ -333,6 +348,9 @@
 .templates-section {
     max-width: 100%;
     margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 20px 20px;
 }
 
 .templates-header {
@@ -399,7 +417,7 @@
 }
 
 .slick-center .template-card img {
-    box-shadow: 0 20px 60px rgba(247, 147, 30, 0.8);
+    box-shadow: 0 20px 60px rgba(247, 147, 30, 0.5);
     margin: 0 !important;
 }
 
@@ -472,6 +490,9 @@
 .branding-section {
     /* max-width: 1400px; */
     margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 20px 20px;
 }
 
 .templates-header {
@@ -493,6 +514,7 @@
     color: #999;
     font-size: 14px;
     line-height: 1.6;
+    font-weight: 600;
 }
 
 .branding-grid {
@@ -700,7 +722,7 @@
 
 .brand-container {
     width: 100%;
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .brand-header {
@@ -708,8 +730,8 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 25px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 25px; */
     gap: 20px;
 }
 
@@ -731,7 +753,10 @@
 }
 
 .brand-content {
-    margin-top: 50px;
+    margin-top: 0;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .brand-highlight {
@@ -742,7 +767,7 @@
 }
 
 .brand-paragraph {
-    font-size: 0.95rem;
+    font-size: 14px;
     line-height: 1.7;
     color: #ddd;
     /* margin-bottom: 15px; */
@@ -752,7 +777,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     gap: 40px;
 }
 
@@ -869,7 +894,7 @@
 
 .slick-vertical .slick-slide {
     display: block;
-    height: 400px !important;
+    /* height: 400px !important; */
     border: none;
 }
 
@@ -905,6 +930,9 @@
         font-size: 1.5rem;
     }
 
+
+
+
     .brand-highlight {
         font-size: 1.2rem;
     }
@@ -924,8 +952,8 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 20px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px; */
 }
 
 .dm-heading {
@@ -939,9 +967,10 @@
     min-width: 300px;
     max-width: 600px;
     text-align: right;
-    font-size: 13px;
+    font-size: 14px;
     color: #cfcfcf;
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .digital-marketing-content {
@@ -1041,6 +1070,37 @@
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
+/* === Animation for right-side card (slide-up effect like vertical carousel) === */
+.dm-card {
+    opacity: 0;
+    transform: translateY(50px);
+    /* start lower */
+}
+
+.dm-card.show {
+    animation: slideUpAppear 0.7s ease-out forwards;
+}
+
+/* Keyframes for bottom-to-top slide and stay */
+@keyframes slideUpAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+        /* Start from bottom */
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+        /* slight overshoot for smooth effect */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* final stable position */
+    }
+}
 
 
 /****************************** Web Development  */
@@ -1057,7 +1117,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     gap: 30px;
 }
 
@@ -1071,7 +1131,7 @@
 }
 
 .webdev-top-desc {
-    font-size: 0.86rem;
+    font-size: 14px;
     color: #e8e8e8;
     width: 49%;
     text-align: right;
@@ -1083,15 +1143,18 @@
     display: flex;
     flex-direction: row;
     gap: 32px;
-    margin-top: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid #fff;
+    border-radius: 15px;
 }
 
 .webdev-info {
     flex: 1.1;
-    background: rgba(41, 42, 50, 0.26);
+    /* background: rgba(41, 42, 50, 0.26);
     border-radius: 18px;
     padding: 35px 30px;
-    border: 1px solid #343648;
+    border: 1px solid #343648; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1105,7 +1168,7 @@
 }
 
 .webdev-desc {
-    font-size: 1rem;
+    font-size: 14px;
     color: #e6e6e6;
     margin-bottom: 13px;
     font-weight: 410;
@@ -1143,10 +1206,10 @@
 
 .webdev-client-title {
     font-size: 1.1rem;
-    color: #fff;
+    color: #ff7a00 !important;
     font-weight: 600;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 

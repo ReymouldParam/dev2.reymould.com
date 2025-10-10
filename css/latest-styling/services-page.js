@@ -203,101 +203,78 @@ $(document).ready(function () {
 
 // Digital Marketing Section Slick Carousel
 $(document).ready(function () {
-  // Define the content for each section
+  // ===== Content data for each service =====
   const dmData = {
     "Search Engine Optimization": {
       title: "Search Engine Optimization",
       text: "Our meticulous approach ensures your logo not only looks exceptional but also communicates your brand story effectively. Let your logo speak volumes about your brand ethos with our expert design solutions.",
-      img: "images/logos/implify-temp.png",
+      img: "images/logos/implify-temp.png"
     },
     "Social Media Marketing": {
       title: "Social Media Marketing",
       text: "We craft data-driven strategies to enhance your social presence, increase engagement, and connect with your audience effectively across all major platforms.",
-      img: "images/logos/tripmeld-temp.png",
+      img: "images/logos/tripmeld-temp.png"
     },
     "Google Ads": {
       title: "Google Ads",
       text: "Maximize your ROI with our strategic ad campaigns, keyword targeting, and performance tracking to reach your audience at the right moment.",
-      img: "images/logos/techcelerate-temp.png",
+      img: "images/logos/techcelerate-temp.png"
     },
     "Content Marketing": {
       title: "Content Marketing",
       text: "Our content experts create compelling, SEO-optimized stories that attract, educate, and convert your target audience.",
-      img: "images/logos/sarojini-temp.png",
+      img: "images/logos/sarojini-temp.png"
     }
   };
 
-  $(document).ready(function () {
-    // ===== Content data for each service =====
-    const dmData = {
-      "Search Engine Optimization": {
-        title: "Search Engine Optimization",
-        text: "Our meticulous approach ensures your logo not only looks exceptional but also communicates your brand story effectively. Let your logo speak volumes about your brand ethos with our expert design solutions.",
-        img: "images/logos/implify-temp.png"
-      },
-      "Social Media Marketing": {
-        title: "Social Media Marketing",
-        text: "We craft data-driven strategies to enhance your social presence, increase engagement, and connect with your audience effectively across all major platforms.",
-        img: "images/logos/tripmeld-temp.png"
-      },
-      "Google Ads": {
-        title: "Google Ads",
-        text: "Maximize your ROI with our strategic ad campaigns, keyword targeting, and performance tracking to reach your audience at the right moment.",
-        img: "images/logos/techcelerate-temp.png"
-      },
-      "Content Marketing": {
-        title: "Content Marketing",
-        text: "Our content experts create compelling, SEO-optimized stories that attract, educate, and convert your target audience.",
-        img: "images/logos/sarojini-temp.png"
-      }
-    };
+  let currentIndex = 0;
+  const items = $(".dm-service-item");
+  const totalItems = items.length;
+  let autoPlay;
 
-    let currentIndex = 0;
-    const items = $(".dm-service-item");
-    const totalItems = items.length;
-    let autoPlay;
-
-    // ===== Function to update right-side content =====
-    function updateRightContent(serviceName) {
-      const data = dmData[serviceName];
-      if (data) {
-        $(".dm-card-title").text(data.title);
-        $(".dm-card-text").text(data.text);
-        $(".dm-card-image").attr("src", data.img);
-      }
+  // ===== Function to update right-side content =====
+  function updateRightContent(serviceName) {
+    const data = dmData[serviceName];
+    if (data) {
+      $(".dm-card").removeClass("show"); // reset animation
+      $(".dm-card-title").text(data.title);
+      $(".dm-card-text").text(data.text);
+      $(".dm-card-image").attr("src", data.img);
+      setTimeout(() => $(".dm-card").addClass("show"), 50); // trigger slide-up
     }
+  }
 
-    // ===== Highlight & update content by index =====
-    function showItemByIndex(index) {
-      const selectedItem = $(items[index]);
-      $(".dm-service-item").removeClass("active");
-      selectedItem.addClass("active");
-      const serviceName = selectedItem.text().replace("• ", "");
-      updateRightContent(serviceName);
-    }
 
-    // ===== Auto-play loop =====
-    function startAutoPlay() {
-      autoPlay = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalItems;
-        showItemByIndex(currentIndex);
-      }, 3000); // 3 seconds
-    }
+  // ===== Highlight & update content by index =====
+  function showItemByIndex(index) {
+    const selectedItem = $(items[index]);
+    $(".dm-service-item").removeClass("active");
+    selectedItem.addClass("active");
+    const serviceName = selectedItem.text().replace("• ", "");
+    updateRightContent(serviceName);
+  }
 
-    function stopAutoPlay() {
-      clearInterval(autoPlay);
-    }
-
-    // ===== Manual click =====
-    items.on("click", function () {
-      stopAutoPlay(); // Pause autoplay temporarily
-      currentIndex = $(this).index();
+  // ===== Auto-play loop =====
+  function startAutoPlay() {
+    autoPlay = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalItems;
       showItemByIndex(currentIndex);
-      startAutoPlay(); // Restart autoplay
-    });
+    }, 3000); // 3 seconds
+  }
 
-    // ===== Initialize first item and start autoplay =====
-    showItemByIndex(0);
-    startAutoPlay();
+  function stopAutoPlay() {
+    clearInterval(autoPlay);
+  }
+
+  // ===== Manual click =====
+  items.on("click", function () {
+    stopAutoPlay(); // Pause autoplay temporarily
+    currentIndex = $(this).index();
+    showItemByIndex(currentIndex);
+    startAutoPlay(); // Restart autoplay
   });
+
+  // ===== Initialize first item and start autoplay =====
+  showItemByIndex(0);
+  startAutoPlay();
 });
