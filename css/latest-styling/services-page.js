@@ -49,6 +49,35 @@ $(document).ready(function () {
     }
   });
 
+  // ===== "Know More" Click Navigation =====
+  $('.service-box .learn-more').click(function (e) {
+    e.preventDefault(); // Prevent default link behavior
+
+    var parentBox = $(this).closest('.service-box');
+
+    if (parentBox.hasClass('design')) {
+      $('.tab-btn[data-filter="design"]').click();
+      $('html, body').animate({
+        scrollTop: $('.design-services-container').offset().top - 100
+      }, 600);
+    } else if (parentBox.hasClass('brand')) {
+      $('.tab-btn[data-filter="brand"]').click();
+      $('html, body').animate({
+        scrollTop: $('.brand-section').offset().top - 100
+      }, 600);
+    } else if (parentBox.hasClass('digital')) {
+      $('.tab-btn[data-filter="digital"]').click();
+      $('html, body').animate({
+        scrollTop: $('.digital-marketing-wrapper').offset().top - 100
+      }, 600);
+    } else if (parentBox.hasClass('web')) {
+      $('.tab-btn[data-filter="web"]').click();
+      $('html, body').animate({
+        scrollTop: $('.webdev-section').offset().top - 100
+      }, 600);
+    }
+  });
+
 });
 
 // Service PAGE Templates Slick Carousel.
