@@ -181,6 +181,41 @@ function startAllProductsCycle() {
     }, initialAllDelay);
 }
 
+/* ===== Updated "Know More" Button Logic ===== */
+$(document).on('click', '.services-wrapper .service-card .learn-btn', function (e) {
+    e.preventDefault();
+
+    const title = $(this).closest('.service-card').find('h3').text().trim();
+
+    // Map your actual service titles to tab IDs
+    const tabMap = {
+        "Tripmeld Travel CRM": 2,
+        "Call Tracker App": 3,
+        "Website Builder": 4,
+        "Whatsapp Marketing": 5,
+        "ReyferJobs": 6
+    };
+
+    const targetTab = tabMap[title];
+    if (!targetTab) return;
+
+    // Switch tab active state
+    $('.tab-link').removeClass('active');
+    $('.tab-link[data-tab="' + targetTab + '"]').addClass('active');
+
+    // Hide All Products section, show product detail
+    $('.services-wrapper').fadeOut(300, function () {
+        updateProductDom(targetTab, true, true, true);
+        $('.product-content, .product-features-section').fadeIn(400);
+    });
+
+    // Scroll to product view
+    $('html, body').animate({
+        scrollTop: $('.product-content').offset().top - 80
+    }, 600);
+});
+
+
 /* ===== Stop All Products Cycle ===== */
 function stopAllProductsCycle() {
     inAllProductsMode = false;

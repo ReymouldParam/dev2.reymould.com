@@ -194,11 +194,11 @@
     padding: 40px 0;
     border-radius: 15px;
     padding: 30px;
-    margin-bottom: 15px ;
+    margin-bottom: 15px;
 }
 
 .service-box:last-child {
-    border-bottom: none;
+    /* border-bottom: none; */
 }
 
 .service-box.reverse {
@@ -207,8 +207,8 @@
 
 .text-content h3 {
     color: #f7931e;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 26px;
+    /* font-weight: 600; */
     margin-bottom: 15px;
 }
 
@@ -224,7 +224,7 @@
     color: #f7931e;
     font-size: 14px;
     border: 1px solid #f7931e;
-    padding: 8px 20px;
+    padding: 2px 20px;
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.3s ease;
