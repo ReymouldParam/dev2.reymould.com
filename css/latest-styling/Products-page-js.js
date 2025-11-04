@@ -32,11 +32,11 @@ const productsData = {
         subtitle: "TripMeld Travel CRM",
         link: "https://tripmeld.com/",
         features: [
-            { title: "📊 Lead & Booking Management", desc: "Easily track and manage all your leads and bookings in one place" },
-            { title: "🔄 Itinerary Builder", desc: "Create customized travel itineraries quickly and efficiently." },
-            { title: "💬 Payment & Visa Tracking", desc: "Monitor payments and visa processes effortlessly" },
-            { title: "🔗 Easy Follow-ups & Task Assignment", desc: "Assign tasks and follow up with clients seamlessly" },
-            { title: "⏱️ Real-Time Analytics & Reports", desc: "Gain actionable insights with real-time performance reports to drive smarter decisions" }
+            { icon: "fa-solid fa-chart-line", title: "Lead & Booking Management", desc: "Easily track and manage all your leads and bookings in one place." },
+            { icon: "fa-solid fa-route", title: "Itinerary Builder", desc: "Create customized travel itineraries quickly and efficiently." },
+            { icon: "fa-solid fa-credit-card", title: "Payment & Visa Tracking", desc: "Monitor payments and visa processes effortlessly." },
+            { icon: "fa-solid fa-link", title: "Easy Follow-ups & Task Assignment", desc: "Assign tasks and follow up with clients seamlessly." },
+            { icon: "fa-solid fa-clock", title: "Real-Time Analytics & Reports", desc: "Gain actionable insights with real-time performance reports to drive smarter decisions." }
         ],
         overview: {
             title: "Instant Lead Generation",
@@ -58,12 +58,13 @@ const productsData = {
         subtitle: "Call Tracker Pro",
         link: "calltracker://download",
         features: [
-            { title: "📞 Call Recording & Loggin", desc: "Capture and store every call effortlessly to ensure no lead or important detail is ever missed" },
-            { title: "📈 Real-Time Call Analytics", desc: "Monitor call patterns and team performance instantly to make smarter, data-driven decisions" },
-            { title: "🎯 CRM & Workflow Integration", desc: "Seamlessly connect calls to your CRM and workflows for smoother operations and better lead management" },
-            { title: "🔔 Automated Notifications & Alerts", desc: "Get instant alerts for missed or important calls to ensure timely follow-ups every time" },
-            { title: "📊 Performance Tracking & Reports", desc: "Track individual and team productivity with detailed reports to optimize performance and results" }
+            { icon: "fa-solid fa-phone-volume", title: "Call Recording & Logging", desc: "Capture and store every call effortlessly to ensure no lead or important detail is ever missed." },
+            { icon: "fa-solid fa-chart-line", title: "Real-Time Call Analytics", desc: "Monitor call patterns and team performance instantly to make smarter, data-driven decisions." },
+            { icon: "fa-solid fa-diagram-project", title: "CRM & Workflow Integration", desc: "Seamlessly connect calls to your CRM and workflows for smoother operations and better lead management." },
+            { icon: "fa-solid fa-bell", title: "Automated Notifications & Alerts", desc: "Get instant alerts for missed or important calls to ensure timely follow-ups every time." },
+            { icon: "fa-solid fa-gauge-high", title: "Performance Tracking & Reports", desc: "Track individual and team productivity with detailed reports to optimize performance and results." }
         ],
+
         overview: {
             title: "Real-Time Call Insights",
             desc: "Our Call Tracker App gives your team actionable insights into every customer interaction — helping you identify top performers and optimize client communication.",
@@ -84,12 +85,13 @@ const productsData = {
         subtitle: "Visual Website Builder",
         link: "https://tripmeld.com/webbuilder",
         features: [
-            { title: "🎨 Ready in 15 Minutes", desc: "Launch your website quickly ; fully ready in just 15 minutes" },
-            { title: "📱 Mobile Responsive", desc: "Your site will look perfect on any device, from smartphones to desktops" },
-            { title: "🚀 Template Options", desc: "Choose from a variety of professional templates to match your brand style" },
-            { title: "🔧 SEO Optimized", desc: "Built-in SEO tools help your website rank higher and attract more visitors" },
-            { title: "🛒 Dynamic Website", desc: "Easily add and update content, images, and pages to keep your website dynamic and engaging" }
+            { icon: "fa-solid fa-palette", title: "Ready in 15 Minutes", desc: "Launch your website quickly — fully ready in just 15 minutes." },
+            { icon: "fa-solid fa-mobile-screen-button", title: "Mobile Responsive", desc: "Your site will look perfect on any device, from smartphones to desktops." },
+            { icon: "fa-solid fa-rocket", title: "Template Options", desc: "Choose from a variety of professional templates to match your brand style." },
+            { icon: "fa-solid fa-magnifying-glass-chart", title: "SEO Optimized", desc: "Built-in SEO tools help your website rank higher and attract more visitors." },
+            { icon: "fa-solid fa-globe", title: "Dynamic Website", desc: "Easily add and update content, images, and pages to keep your website dynamic and engaging." }
         ],
+
         overview: {
             title: "Design & Launch Websites Effortlessly",
             desc: "TripMeld Website Builder allows you to create pixel-perfect websites that load fast and convert visitors into customers — all with zero coding required.",
@@ -112,12 +114,13 @@ const productsData = {
         subtitle: "WhatsApp Business Solution",
         link: "https://tripmeld.com/whatsapp",
         features: [
-            { title: "💬 Bulk Messaging", desc: "Send personalized messages to thousands of customers." },
-            { title: "🤖 Chatbot Integration", desc: "Automate responses and improve engagement using AI chatbots." },
-            { title: "📊 Campaign Analytics", desc: "Track open rates, engagement, and response metrics." },
-            { title: "👥 Contact Management", desc: "Organize customer contacts into targeted segments." },
-            { title: "📅 Scheduled Messages", desc: "Plan and send automated messages effortlessly." }
+            { icon: "fa-solid fa-comments", title: "Bulk Messaging", desc: "Send personalized messages to thousands of customers." },
+            { icon: "fa-solid fa-robot", title: "Chatbot Integration", desc: "Automate responses and improve engagement using AI chatbots." },
+            { icon: "fa-solid fa-chart-column", title: "Campaign Analytics", desc: "Track open rates, engagement, and response metrics." },
+            { icon: "fa-solid fa-address-book", title: "Contact Management", desc: "Organize customer contacts into targeted segments." },
+            { icon: "fa-solid fa-calendar-days", title: "Scheduled Messages", desc: "Plan and send automated messages effortlessly." }
         ],
+
         overview: {
             title: "Automated WhatsApp Campaigns",
             desc: "TripMeld’s WhatsApp Marketing platform empowers businesses to connect with customers using personalized automation that drives real engagement.",
@@ -136,12 +139,13 @@ const productsData = {
         subtitle: "ReyferJobs Platform",
         link: "https://tripmeld.com/reyferjobs",
         features: [
-            { title: "🎯 Referrals", desc: "Easily refer candidates and leverage your network to find the best talent faster" },
-            { title: "📝 Matching Score", desc: "Automatically evaluate candidates with a matching score to identify the most suitable profiles for each role" },
-            { title: "🔔 Job Search", desc: "Search and apply to multiple roles seamlessly, ensuring every opportunity is within reach" },
-            { title: "📊 Resume Upload (Multiple)", desc: "Upload up to 3 resumes at once or apply to 3 different job roles simultaneously for maximum convenience" },
-            { title: "💼 Credit Scores Based on Referrals", desc: "Earn and track credit scores for successful referrals, incentivizing employees to help recruit top talent" }
+            { icon: "fa-solid fa-user-plus", title: "Referrals", desc: "Easily refer candidates and leverage your network to find the best talent faster." },
+            { icon: "fa-solid fa-star", title: "Matching Score", desc: "Automatically evaluate candidates with a matching score to identify the most suitable profiles for each role." },
+            { icon: "fa-solid fa-briefcase", title: "Job Search", desc: "Search and apply to multiple roles seamlessly, ensuring every opportunity is within reach." },
+            { icon: "fa-solid fa-file-arrow-up", title: "Resume Upload (Multiple)", desc: "Upload up to 3 resumes at once or apply to 3 different job roles simultaneously for maximum convenience." },
+            { icon: "fa-solid fa-coins", title: "Credit Scores Based on Referrals", desc: "Earn and track credit scores for successful referrals, incentivizing employees to help recruit top talent." }
         ],
+
         overview: {
             title: "Smarter Hiring with AI",
             desc: "ReyferJobs helps businesses streamline recruitment and candidates discover better opportunities through advanced AI matching and automation.",
@@ -220,9 +224,15 @@ function updateProductDom(productId, animated = false, showFeatures = true, show
         $featuresGrid.empty();
 
         product.features.forEach(f => {
-            const $card = $(`<div class="feature-card"><h3>${f.title}</h3><p>${f.desc}</p></div>`);
+            const $card = $(`
+        <div class="feature-card">
+            <h3><i class="${f.icon}"></i> ${f.title}</h3>
+            <p>${f.desc}</p>
+        </div>
+    `);
             $featuresGrid.append($card);
         });
+
 
         // === Overview / Detailed Feature Section ===
         if (product.overview) {
