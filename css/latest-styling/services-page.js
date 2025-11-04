@@ -236,22 +236,22 @@ $(document).ready(function () {
   const dmData = {
     "Search Engine Optimization": {
       title: "Search Engine Optimization",
-      text: "Our meticulous approach ensures your logo not only looks exceptional but also communicates your brand story effectively. Let your logo speak volumes about your brand ethos with our expert design solutions.",
+      text: "With our expert SEO strategies, your business will rise above the competition and reach the right audience at the right time. By optimizing your website structure, content, and keywords, we ensure higher search rankings, consistent organic traffic, and measurable results. Every effort is focused on growing your brand visibility and turning online searches into real business opportunities",
       img: "images/logos/implify-temp.png"
     },
     "Social Media Marketing": {
       title: "Social Media Marketing",
-      text: "We craft data-driven strategies to enhance your social presence, increase engagement, and connect with your audience effectively across all major platforms.",
+      text: "Through creative and data-driven social media campaigns, we will grow your business by building meaningful connections with your audience. From engaging reels and posts to strategic community-building, we increase your brand awareness, foster trust, and turn followers into loyal customers. Our approach ensures every interaction contributes to your long-term growth",
       img: "images/logos/tripmeld-temp.png"
     },
     "Google Ads": {
       title: "Google Ads",
-      text: "Maximize your ROI with our strategic ad campaigns, keyword targeting, and performance tracking to reach your audience at the right moment.",
+      text: "We will accelerate your business growth with targeted Google Ads campaigns that reach potential customers instantly. By leveraging precise audience targeting, A/B testing, and continuous optimization, we maximize every ad rupee and generate high-quality leads. Our performance-focused strategies ensure clicks translate into conversions and real business results",
       img: "images/logos/techcelerate-temp.png"
     },
     "Content Marketing": {
       title: "Content Marketing",
-      text: "Our content experts create compelling, SEO-optimized stories that attract, educate, and convert your target audience.",
+      text: "Through compelling and valuable content, we will grow your business by strengthening your brand authority and engaging your audience. Whether it’s blogs, visuals, or storytelling, we craft content that informs, inspires, and converts. Our content marketing approach ensures your brand stays memorable while driving tangible growth and customer action",
       img: "images/logos/sarojini-temp.png"
     }
   };
