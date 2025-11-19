@@ -8,11 +8,11 @@ const productsData = {
         subtitle: "TripMeld Product Suite",
         link: "https://tripmeld.com/",
         features: [
-            { title: "🎯 Complete Solutions", desc: "End-to-end business management tools for modern enterprises." },
-            { title: "🔧 Customizable", desc: "Tailor each product to match your specific business requirements." },
-            { title: "📱 Mobile Ready", desc: "Access all features on any device, anywhere, anytime." },
-            { title: "🔒 Secure & Reliable", desc: "Enterprise-grade security with 99.9% uptime guarantee." },
-            { title: "📈 Analytics Driven", desc: "Make data-driven decisions with comprehensive reporting." }
+            { icon: "fa-solid fa-chart-line", title: "🎯 Complete Solutions", desc: "End-to-end business management tools for modern enterprises." },
+            { icon: "fa-solid fa-route", title: "🔧 Customizable", desc: "Tailor each product to match your specific business requirements." },
+            { icon: "fa-solid fa-credit-card", title: "📱 Mobile Ready", desc: "Access all features on any device, anywhere, anytime." },
+            { icon: "fa-solid fa-link", title: "🔒 Secure & Reliable", desc: "Enterprise-grade security with 99.9% uptime guarantee." },
+            { icon: "fa-solid fa-clock", title: "📈 Analytics Driven", desc: "Make data-driven decisions with comprehensive reporting." }
         ],
         overview: {
             title: "Unified Business Management Suite",
