@@ -168,7 +168,6 @@ $(document).ready(function () {
 });
 // Web Development Section Auto-Rotate Showcase
 $(document).ready(function () {
-  // Showcase data
   const showcaseData = [
     {
       title: "TripMeld",
@@ -182,13 +181,13 @@ $(document).ready(function () {
     },
     {
       title: "Sarojini Dental",
-      img: "images/logos/sarojini-temp.png",
+      img: "/images/logos/Sarojini-temp.png",
       link: "https://sarojinidental.com/"
     },
     {
-      title: "Techcelerate",
-      img: "images/logos/sarojini-temp.png",
-      link: "https://techcelerate.io/"
+      title: "Vircfoconsulting",
+      img: "/images/Vircfo-consulting.png",
+      link: "https://vircfoconsulting.com/"
     }
   ];
 
@@ -198,36 +197,30 @@ $(document).ready(function () {
 
   function updateShowcase() {
     const item = showcaseData[currentIndex];
-
-    // Update the image src before fading
     const $currentImg = $images.filter('.active');
     const $nextImg = $images.eq(currentIndex);
 
-    // Set the correct image source from showcaseData
     $nextImg.attr('src', item.img);
 
-    // Fade out text
     $('#webdev-client-title, #webdev-dynamic-link').fadeOut(300, function () {
       $('#webdev-client-title').text(item.title);
       $('#webdev-dynamic-link').attr('href', item.link).text(item.link);
       $('#webdev-client-title, #webdev-dynamic-link').fadeIn(400);
     });
 
-    // Fade out current image
     $currentImg.fadeOut(400, function () {
       $currentImg.removeClass('active');
       $nextImg.addClass('active').fadeIn(500);
     });
 
-    // Move to next index
     currentIndex = (currentIndex + 1) % totalImages;
   }
 
+  // Set first slide immediately — no blank screen
+  updateShowcase();
 
-  // Start auto-rotation after 3 seconds
-  setTimeout(function () {
-    setInterval(updateShowcase, 4000);
-  }, 3000);
+  // Then auto-rotate every 4 seconds
+  setInterval(updateShowcase, 4000);
 });
 
 // Digital Marketing Section Slick Carousel
@@ -237,22 +230,22 @@ $(document).ready(function () {
     "Search Engine Optimization": {
       title: "Search Engine Optimization",
       text: "With our expert SEO strategies, your business will rise above the competition and reach the right audience at the right time. By optimizing your website structure, content, and keywords, we ensure higher search rankings, consistent organic traffic, and measurable results. Every effort is focused on growing your brand visibility and turning online searches into real business opportunities",
-      img: "images/logos/implify-temp.png"
+      img: "/images/SEO-OPTIMAZATION.jpeg"
     },
     "Social Media Marketing": {
       title: "Social Media Marketing",
       text: "Through creative and data-driven social media campaigns, we will grow your business by building meaningful connections with your audience. From engaging reels and posts to strategic community-building, we increase your brand awareness, foster trust, and turn followers into loyal customers. Our approach ensures every interaction contributes to your long-term growth",
-      img: "images/logos/tripmeld-temp.png"
+      img: "/images/social-media-marketing.jpeg"
     },
     "Google Ads": {
       title: "Google Ads",
       text: "We will accelerate your business growth with targeted Google Ads campaigns that reach potential customers instantly. By leveraging precise audience targeting, A/B testing, and continuous optimization, we maximize every ad rupee and generate high-quality leads. Our performance-focused strategies ensure clicks translate into conversions and real business results",
-      img: "images/logos/techcelerate-temp.png"
+      img: "/images/Google-adds.jpeg"
     },
     "Content Marketing": {
       title: "Content Marketing",
       text: "Through compelling and valuable content, we will grow your business by strengthening your brand authority and engaging your audience. Whether it’s blogs, visuals, or storytelling, we craft content that informs, inspires, and converts. Our content marketing approach ensures your brand stays memorable while driving tangible growth and customer action",
-      img: "images/logos/sarojini-temp.png"
+      img: "/images/content-create - Copy.jpeg"
     }
   };
 
