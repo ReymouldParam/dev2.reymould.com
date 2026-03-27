@@ -171,14 +171,14 @@ $(document).ready(function () {
   // Showcase data
   const showcaseData = [
     {
-      title: "TripMeld CRM",
+      title: "TripMeld",
       img: "images/logos/tripmeld-temp.png",
       link: "https://tripmeld.com/"
     },
     {
-      title: "Reymould Branding",
+      title: "Implify",
       img: "images/logos/implify-temp.png",
-      link: "https://reymould.com/"
+      link: "https://implifyinc.com/"
     },
     {
       title: "Sarojini Dental",
